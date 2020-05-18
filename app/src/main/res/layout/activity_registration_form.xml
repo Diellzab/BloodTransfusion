@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Form for Donors"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+
+            />
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textSize="15sp"
+            android:textColor="@color/Grayscale"
+            android:layout_margin="10dp"
+             />
+
+        <EditText
+            android:id="@+id/EditTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Last Name"
+            android:textColor="@color/Grayscale"
+            android:layout_margin="15dp"
+            />
+
+        <EditText
+            android:id="@+id/EditTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/TextViewSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Gender"
+            android:textColor="@color/Grayscale"
+            android:layout_margin="10dp"/>
+
+
+
+        <RadioGroup
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_margin="10dp"
+                android:textColor="@color/Grayscale"
+                android:id="@+id/radioButtonFemale"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButtonMale"
+                android:textColor="@color/Grayscale"
+                android:layout_margin="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="Male"/>
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Email Address"
+            android:textColor="@color/Grayscale"
+            android:layout_margin="15dp"
+            />
+
+        <EditText
+            android:id="@+id/EditTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Telephone"
+            android:id="@+id/TextViewTelephone"
+            android:textColor="@color/Grayscale"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:id="@+id/EditTextTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Password"
+            android:id="@+id/TextViewPassword"
+            android:textColor="@color/Grayscale"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:id="@+id/EditTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Address"
+            android:textColor="@color/Grayscale"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:id="@+id/EditTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/TextViewType"
+            android:textColor="@color/Grayscale"
+            android:textSize="15sp"
+            android:text="Type of Blood"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/checkBoxDonor"
+            android:text="I want to be a Donor"
+            android:onClick="onCheckBoxClicked"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/Grayscale"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>
