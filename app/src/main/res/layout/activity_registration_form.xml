@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_layout">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,10 +16,10 @@
             android:layout_height="wrap_content"
             android:text="Registration Form for Donors"
             android:gravity="center"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/red"
+            android:textColor="@color/blue4"
 
             />
 
@@ -28,15 +29,19 @@
             android:layout_height="wrap_content"
             android:text="First Name"
             android:textSize="15sp"
-            android:textColor="@color/Grayscale"
-            android:layout_margin="10dp"
+            android:textColor="@color/blue4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="30dp"
              />
 
         <EditText
             android:id="@+id/EditTextFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="30dp"
             android:inputType="text"/>
 
         <TextView
@@ -44,26 +49,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
             android:text="Last Name"
-            android:textColor="@color/Grayscale"
-            android:layout_margin="15dp"
+            android:textColor="@color/blue4"
+
             />
 
         <EditText
             android:id="@+id/EditTextLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="30dp"
             android:inputType="text"/>
 
         <TextView
-            android:id="@+id/TextViewSex"
+            android:id="@+id/TextViewGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:text="Gender"
-            android:textColor="@color/Grayscale"
-            android:layout_margin="10dp"/>
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/blue4" />
 
 
 
@@ -71,21 +83,22 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:layout_margin="10dp"
-                android:textColor="@color/Grayscale"
+                android:textColor="@color/blue4"
                 android:id="@+id/radioButtonFemale"
                 android:onClick="onRadioButtonClicked"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButtonMale"
-                android:textColor="@color/Grayscale"
-                android:layout_margin="10dp"
+                android:textColor="@color/blue4"
                 android:onClick="onRadioButtonClicked"
                 android:text="Male"/>
 
@@ -93,29 +106,14 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textViewEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="Email Address"
-            android:textColor="@color/Grayscale"
-            android:layout_margin="15dp"
-            />
-
-        <EditText
-            android:id="@+id/EditTextEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:inputType="text"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
             android:text="Telephone"
             android:id="@+id/TextViewTelephone"
-            android:textColor="@color/Grayscale"
+            android:textColor="@color/blue4"
             android:textSize="15dp"
             />
         <EditText
@@ -123,16 +121,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="30dp"
             />
+
+        <TextView
+            android:id="@+id/textViewEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Email Address"
+            android:textColor="@color/blue4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:id="@+id/EditTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="30dp"
+            android:inputType="text"/>
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
             android:text="Password"
             android:id="@+id/TextViewPassword"
-            android:textColor="@color/Grayscale"
+            android:textColor="@color/blue4"
             android:textSize="15dp"
             />
         <EditText
@@ -140,7 +165,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="30dp"
             />
 
         <TextView
@@ -149,36 +176,47 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:text="Address"
-            android:textColor="@color/Grayscale"
-            android:layout_margin="10dp"
+            android:textColor="@color/blue4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
             />
         <EditText
             android:id="@+id/EditTextAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="30dp"
             android:inputType="text"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/TextViewType"
-            android:textColor="@color/Grayscale"
+            android:textColor="@color/blue4"
             android:textSize="15sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
+
             android:text="Type of Blood"/>
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"/>
 
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
             android:id="@+id/checkBoxDonor"
             android:text="I want to be a Donor"
-            android:onClick="onCheckBoxClicked"/>
+            android:onClick="onCheckBoxClicked"
+            android:textColor="@color/blue4"/>
 
         <Button
             android:layout_width="match_parent"
@@ -188,15 +226,30 @@
             android:id="@+id/buttonSave"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/Grayscale"/>
+            android:background="@color/blue1"
+            android:textColor="@color/orange"/>
 
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have a Donor account"
+            android:layout_margin="8sp"
+            android:gravity="center"
+            android:textSize="17sp"
+
+            android:textColor="@color/blue4"/>
+        <TextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:gravity="center"
+            android:layout_margin="5sp"
+            android:textSize="25sp"
+            android:textColor="@color/blue3"/>
 
     </LinearLayout>
-
-
-
-
-
 
 
 </ScrollView>

@@ -5,4 +5,13 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="red">#ff0006</color>
     <color name="Grayscale">#808080</color>
+
+
+    <!--    Ngjyrat baze -->
+    <color name="blue3">#3d5a80</color>
+    <color name="blue2">#98c1d9</color>
+    <color name="blue1">#e0fbfc</color>
+    <color name="blue4">#293241</color>
+    <color name="orange">#ee6c4d</color>
+
 </resources>
