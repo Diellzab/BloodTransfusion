@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.fiek.transfuzioni_gjakut.R;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 public class Registration_form extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class Registration_form extends AppCompatActivity {
     Button btnRegister;
     Spinner spinner;
     CheckBox cbDonor;
-    FirebaseAuth fAuth;
+
 
 
 

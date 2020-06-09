@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.fiek.transfuzioni_gjakut.R;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 import java.util.regex.Pattern;
 
@@ -25,7 +25,7 @@ public class Login_form  extends AppCompatActivity {
     TextView tvRegister;
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passwordError;
-    FirebaseAuth fAuth;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
