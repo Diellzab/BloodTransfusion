@@ -10,16 +10,17 @@
     tools:context="com.fiek.transfuzioni_gjakut.forms.LoginForm">
 
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
 
+
+
         <androidx.cardview.widget.CardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blue4"
@@ -28,12 +29,23 @@
             app:cardElevation="4dp"
             app:cardCornerRadius="4dp">
 
+
             <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+                android:gravity="center">
+                
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="20dp"
+                    android:text="COVID-19"
+                    android:textColor="@color/white"
+                    android:background="@drawable/virus_covid_button"
+                    android:id="@+id/button_covid19"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/emailErr"
@@ -88,7 +100,8 @@
                     android:gravity="center"
                     android:text="@string/click_here_for_register"
                     android:textColor="@color/blue4"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+/>
 
 
             </LinearLayout>

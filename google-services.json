@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "257720231523",
+    "firebase_url": "https://transufzionigjakut.firebaseio.com",
+    "project_id": "transufzionigjakut",
+    "storage_bucket": "transufzionigjakut.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257720231523:android:447086afd97b4260797a56",
+        "android_client_info": {
+          "package_name": "com.fiek.transufzioni_gjakut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257720231523-tgaqlfrrcchtul2qgko31rsabr4bro2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fiek.transufzioni_gjakut",
+            "certificate_hash": "57250dc85fb698e5b305fe8f23f053677450e027"
+          }
+        },
+        {
+          "client_id": "257720231523-502h4jpk6d8th84dl01e6n318htd7n6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4vqDIr5sZjUUiuPobGMEkLEUH-gIqv8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257720231523-502h4jpk6d8th84dl01e6n318htd7n6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
