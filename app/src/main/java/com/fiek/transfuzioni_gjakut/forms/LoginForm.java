@@ -16,6 +16,7 @@ import com.fiek.transfuzioni_gjakut.activities.Coronavirus_Cases;
 import com.fiek.transfuzioni_gjakut.activities.Login_form;
 import com.fiek.transfuzioni_gjakut.activities.Registration_form;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginForm extends AppCompatActivity {
     EditText etEmail, etPassword;
@@ -23,6 +24,7 @@ public class LoginForm extends AppCompatActivity {
     TextView tvRegister, coronaVirusCases;
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passwordError;
+    FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class LoginForm extends AppCompatActivity {
         emailError = (TextInputLayout) findViewById(R.id.emailErr);
         passwordError = (TextInputLayout) findViewById(R.id.errPassword);
         coronaVirus = (Button) findViewById(R.id.button_covid19);
+
 
 
 

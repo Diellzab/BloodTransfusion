@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.forms.LoginForm;
+import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 
 
 public class Registration_form extends AppCompatActivity {
@@ -48,17 +50,18 @@ public class Registration_form extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-            }
-        });
-
-        tvSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Login_form.class);
+                Intent intent = new Intent(Registration_form.this, Login_form.class);
                 startActivity(intent);
             }
         });
+
+//        tvSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), LoginForm.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     public  void SetValidation() {
