@@ -67,7 +67,7 @@ public class LoginForm extends AppCompatActivity {
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Registration_form.class);
+                Intent intent = new Intent(getApplicationContext(), RegistrationForm.class);
                 startActivity(intent);
             }
         });
