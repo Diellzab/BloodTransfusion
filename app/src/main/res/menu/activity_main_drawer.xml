@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_Register"
+        android:icon="@mipmap/blood"
+        android:title="Register"/>
+    <item
+        android:id="@+id/nav_donor"
+        android:icon="@mipmap/blood"
+        android:title="Donor"
+        />
+
+    <item
+        android:id="@+id/nav_recipient"
+        android:icon="@mipmap/blood"
+        android:title="Recipient"/>
+
+    <item
+        android:id="@+id/nav_depoist"
+        android:icon="@mipmap/blood"
+        android:title="Depoist" />
+
+</menu>

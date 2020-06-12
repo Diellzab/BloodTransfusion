@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Blood Transfusion</string>
+    
+    
+    <string-array name="navigation_drawer_items_array">
+        <item>Regjistrohu</item>
+        <item>Dhuruesit e gjakut</item>
+        <item>Marresit e gjakut</item>
+        <item>Depozita</item>
+    </string-array>
 
 
     <string name="prompt_email">Email</string>
@@ -18,4 +26,5 @@
     <string name="error_invalid_password">Please enter a minimum password of 6 characters</string>
     <string name="email">Email</string>
     <string name="click_here_for_register">Click here for register</string>
+    <string name="nav_header_subtitle">Nav header subtitle</string>
 </resources>
