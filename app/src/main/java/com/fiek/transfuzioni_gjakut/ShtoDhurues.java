@@ -1,0 +1,16 @@
+package com.fiek.transfuzioni_gjakut;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class ShtoDhurues extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_shto_dhurues);
+
+
+    }
+}
