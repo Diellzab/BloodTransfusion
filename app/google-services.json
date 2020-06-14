@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "257720231523-kb72ugdpgmmc0adbpo1th100dtjkv81k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fiek.transufzioni_gjakut",
+            "certificate_hash": "0a941c6b7a04cb94bacc164f22354c74ef768dd5"
+          }
+        },
+        {
           "client_id": "257720231523-tgaqlfrrcchtul2qgko31rsabr4bro2v.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
