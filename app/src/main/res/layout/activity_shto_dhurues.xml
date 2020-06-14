@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.fiek.transfuzioni_gjakut.ShtoDhurues">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Donor"
+        android:textSize="30dp"
+        android:id="@+id/add_donor_title"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Name"
+        android:gravity="center"
+        android:id="@+id/add_donor_name"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Surname"
+        android:gravity="center"
+        android:id="@+id/add_donor_surname"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/add_donor_email"
+        android:hint="Email"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blod Type"
+        android:gravity="center"
+        />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_donor_radioGroup"
+        android:orientation="horizontal"
+        >
+
+
+        <RadioButton
+            android:id="@+id/Apozitiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:text="A+"
+            android:textSize="10dp"
+            />
+
+        <RadioButton
+            android:id="@+id/Anegativ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:textSize="10dp"
+            android:text="A-" />
+
+        <RadioButton
+            android:id="@+id/Bpozitiv"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_weight="1"
+            android:text="B+" />
+
+        <RadioButton
+            android:id="@+id/Bnegativ"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="B-" />
+
+        <RadioButton
+            android:id="@+id/ABpozitiv"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AB+" />
+
+        <RadioButton
+            android:id="@+id/ABnegativ"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AB-" />
+
+        <RadioButton
+            android:id="@+id/Opozitiv"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="O+" />
+
+        <RadioButton
+            android:id="@+id/Onegativ"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:onClick="add_donor_bloobType_onclick_method"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="O-" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:id="@+id/add_donor_phone"
+        android:hint="Phone"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Blood quantity given ML"
+        android:layout_margin="5dp"
+        android:id="@+id/add_donor_quantity"
+        />
+    
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:id="@+id/add_donor_add_btn"
+            />
+</LinearLayout>
