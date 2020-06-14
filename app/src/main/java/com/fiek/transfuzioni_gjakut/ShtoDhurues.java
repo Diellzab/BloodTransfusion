@@ -11,6 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
 public class ShtoDhurues extends AppCompatActivity {
@@ -19,7 +22,9 @@ public class ShtoDhurues extends AppCompatActivity {
     RadioButton radioButton;
     TextView add_donor_title;
     EditText add_donor_name, add_donor_surname,add_donor_email,add_donor_phone,add_donor_quantity ;
+    DatabaseReference reff;
 
+    addDonorDataInsert shtoDhurues;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,8 @@ public class ShtoDhurues extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 TextView add_donor_title = (TextView) findViewById(R.id.add_donor_title);
                 EditText add_donor_name = (EditText) findViewById(R.id.add_donor_name);
                 EditText add_donor_surname = (EditText) findViewById(R.id.add_donor_surname);
@@ -43,14 +50,28 @@ public class ShtoDhurues extends AppCompatActivity {
                 radioButton = findViewById(radioId);
 
                 //Qeto posht duhet mi rujt ne databaz
-                String blodTypeChecked = radioButton.getText().toString(); // GRUPI GJAKUT
-                String email =  add_donor_email.getText().toString(); //IMELLA
-                String name = add_donor_name.getText().toString(); //EMRI
-                String surname = add_donor_surname.getText().toString(); //MBIEMRI
-                String telefoni = add_donor_phone.getText().toString(); //TELEFONI
-                String sasia = add_donor_quantity.getText().toString(); //SASIA
+                String blodTypeChecked = radioButton.getText().toString().trim(); // GRUPI GJAKUT
+                String email =  add_donor_email.getText().toString().trim(); //IMELLA
+                String name = add_donor_name.getText().toString().trim(); //EMRI
+                String surname = add_donor_surname.getText().toString().trim(); //MBIEMRI
+                String telefoni = add_donor_phone.getText().toString().trim(); //TELEFONI
+                Integer sasia = Integer.parseInt(add_donor_quantity.getText().toString().trim()); //SASIA
 
+                add_donor_title.setText(name);
 
+//                shtoDhurues.setEmri(name);
+                shtoDhurues.setTipiGjakut(blodTypeChecked);
+                shtoDhurues.setEmail(email);
+                shtoDhurues.setMbiemri(surname);
+                shtoDhurues.setTelefoni(telefoni);
+                shtoDhurues.setSasia(sasia);
+
+                reff = FirebaseDatabase.getInstance().getReference().child("shtoDhurues");
+                shtoDhurues = new addDonorDataInsert();
+                reff.push().setValue(shtoDhurues);
+
+//                Toast.makeText(this, "Selected Blood Type: " + name,
+//                        Toast.LENGTH_SHORT).show();
             }
         });
 
