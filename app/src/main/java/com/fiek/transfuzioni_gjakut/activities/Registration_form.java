@@ -91,15 +91,15 @@ public class Registration_form extends AppCompatActivity {
         int radioId = radioGroup.getCheckedRadioButtonId();
 
         if(radioId == -1){
-            Toast.makeText(MainActivity.this, "Click one", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this, "Click one", Toast.LENGTH_SHORT).show();
            return;
         }
         if(!cbDonor.isChecked()){
-            Toast.makeText(MainActivity.this, "You should check this", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this, "You should check this", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
     }
 
     public void onRadioButtonClicked(View v){
