@@ -22,15 +22,17 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btnHomeLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/redwall"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+
             android:text="Login"
             />
 
@@ -39,11 +41,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/redwall"
+            android:background="@drawable/custom_button"
+            app:layout_constraintStart_toEndOf="@+id/btnHomeLogin"
+            app:layout_constraintTop_toTopOf="parent"
+
             android:text="Sign up"/>
 
 
 
-    </LinearLayout>
+
+
 
 
 

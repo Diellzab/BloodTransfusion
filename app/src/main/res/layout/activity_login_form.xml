@@ -89,9 +89,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
-                    android:background="@color/blue3"
+                    android:background="@drawable/other_button"
                     android:text="Login"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/blue4"
                     android:textSize="16sp"/>
 
                 <TextView

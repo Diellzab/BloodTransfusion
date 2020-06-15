@@ -235,6 +235,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
+            android:layout_marginLeft="30dp"
             android:entries="@array/type"/>
 
 
@@ -253,12 +254,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:text="Save"
+            android:text="Register"
             android:id="@+id/buttonSave"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:background="@color/blue1"
-            android:textColor="@color/orange"/>
+            android:background="@drawable/other_button"
+            android:textColor="@color/blue4"/>
 
         <TextView
             android:id="@+id/tvLogin"

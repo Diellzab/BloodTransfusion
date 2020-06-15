@@ -37,7 +37,7 @@ public class splashScreen extends AppCompatActivity {
         third = findViewById(R.id.third_line);
         fourth = findViewById(R.id.fourth_left);
         fifth = findViewById(R.id.first_linee);
-        sixth = findViewById(R.id.second_line);
+        sixth = findViewById(R.id.second_linee);
         seventh = findViewById(R.id.third_linee);
         eigtht = findViewById(R.id.fourth_linee);
 
