@@ -23,15 +23,14 @@ import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 
 public class Registration_form extends AppCompatActivity {
 
-//    TextView tvSignIn;
-//    EditText etFName, etLName, etEmail, etPassword, etTelephone, etAddress;
-//    RadioButton  radioButton;
-//    Button btnRegister;
-//    Spinner spinner;
-//    CheckBox cbDonor;
-//    RadioGroup radioGroup;
-
-
+    TextView tvSignIn;
+    EditText etFName, etLName, etEmail, etPassword, etTelephone, etAddress;
+    RadioButton  radioButton;
+    Button btnRegister;
+    Spinner spinner;
+    CheckBox cbDonor;
+    RadioGroup radioGroupMF;
+    RadioButton radioButtonMF;
 
 
 
@@ -40,18 +39,18 @@ public class Registration_form extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
 
-//        etFName = findViewById(R.id.EditTextFirstName);
-//        etLName =  findViewById(R.id.EditTextLastName);
-////        rbFemale =  findViewById(R.id.radioButtonFemale);
+        etFName = findViewById(R.id.first_name_id);
+        etLName =  findViewById(R.id.last_name_id);
+//        rbFemale =  findViewById(R.id.radioButtonFemale);
 ////        rbMale =  findViewById(R.id.radioButtonMale);
 //        etEmail = findViewById(R.id.EditTextEmailAddress);
 //        etPassword =  findViewById(R.id.EditTextPassword);
 //        etTelephone =  findViewById(R.id.EditTextTelephone);
 //        etAddress =  findViewById(R.id.EditTextAddress);
-//        btnRegister =  findViewById(R.id.buttonSave);
+        btnRegister =  findViewById(R.id.buttonSave);
 //        spinner =  findViewById(R.id.spinner);
 //        cbDonor =  findViewById(R.id.checkBoxDonor);
-//        radioGroup = findViewById(R.id.radioGroup);
+        radioGroupMF = findViewById(R.id.genderRadioGroup);
 
 
 //        Spinner spinner = findViewById(R.id.spinner);
@@ -82,16 +81,16 @@ public class Registration_form extends AppCompatActivity {
 //            }
 //        });
 
-//        btnRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Registration_form.this, Login_form.class);
-//                startActivity(intent);
-//
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Registration_form.this, LoginForm.class);
+                startActivity(intent);
+
 //                int radioButtonId = radioGroup.getCheckedRadioButtonId();
 //                radioButton = findViewById(radioButtonId);
-//            }
-//        });
+            }
+        });
 //
 //
 //        tvSignIn.setOnClickListener(new View.OnClickListener() {
@@ -136,4 +135,13 @@ public class Registration_form extends AppCompatActivity {
         //Check for valid surname
 
 
-    }}
+    }
+
+    //Ktu posht i kemi insertu te dhenat per Radio Groups
+    public void onRadioButtonClickedGender(View v) {
+        int radioId = radioGroupMF.getCheckedRadioButtonId();
+        radioButtonMF = findViewById(radioId);
+        Toast.makeText(this,  radioButtonMF.getText(),
+                Toast.LENGTH_SHORT).show();
+    }
+}
