@@ -28,54 +28,48 @@
 
 
 
-        <TextView
-            android:id="@+id/textViewFirstName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="First Name"
-            android:textSize="15sp"
-            android:textColor="@color/blue4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="30dp"
-             />
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/firstName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="30dp"
+           android:layout_marginTop="1dp"
+           android:layout_marginRight="30dp"
+           android:hint="First Name"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="text"
+
+               />
+       </com.google.android.material.textfield.TextInputLayout>
 
 
 
-
-        <EditText
-            android:id="@+id/EditTextFirstName"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
-            android:inputType="text"/>
+            android:hint="Last Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
-        <TextView
-            android:id="@+id/textViewLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="30dp"
-            android:text="Last Name"
-            android:textColor="@color/blue4"
-
-            />
-
-
-        <EditText
-            android:id="@+id/EditTextLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="30dp"
-            android:inputType="text"/>
 
 
         <TextView
@@ -119,104 +113,95 @@
 
         </RadioGroup>
 
-        <TextView
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telephone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
-            android:text="Telephone"
-            android:id="@+id/TextViewTelephone"
-            android:textColor="@color/blue4"
-            android:textSize="15dp"
-            />
+            android:hint="Phone number "
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
-        <EditText
-            android:id="@+id/EditTextTelephone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="30dp"
-            />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-
-        <TextView
-            android:id="@+id/textViewEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="Email Address"
-            android:textColor="@color/blue4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="30dp"
-            />
-
-
-
-        <EditText
-            android:id="@+id/EditTextEmailAddress"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
-            android:inputType="text"/>
+            android:hint="Email Address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
-
-        <TextView
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
-            android:text="Password"
-            android:id="@+id/TextViewPassword"
-            android:textColor="@color/blue4"
-            android:textSize="15dp"
-            />
+            app:passwordToggleEnabled="true"
+            android:hint="Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 
-        <EditText
-            android:id="@+id/EditTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="30dp"
-            />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
-        <TextView
-            android:id="@+id/textViewAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="Address"
-            android:textColor="@color/blue4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="30dp"
-            />
-
-
-        <EditText
-            android:id="@+id/EditTextAddress"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
-            android:inputType="text"/>
+            android:hint="Address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
 
 
 
@@ -234,7 +219,9 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner"/>
+            android:id="@+id/spinner"
+            android:layout_marginLeft="30dp"
+            android:entries="@array/type"/>
 
 
         <CheckBox
@@ -252,12 +239,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:text="Save"
+            android:text="Register"
             android:id="@+id/buttonSave"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:background="@color/blue1"
-            android:textColor="@color/orange"/>
+            android:background="@drawable/other_button"
+            android:textColor="@color/blue4"/>
 
         <TextView
             android:id="@+id/tvLogin"

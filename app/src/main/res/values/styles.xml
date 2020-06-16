@@ -19,6 +19,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppThemee" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue2</item>
+        <item name="colorPrimaryDark">@color/blue4</item>
+        <item name="colorAccent">@color/blue3</item>
+
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="colorPrimary">@color/blue2</item>
         <item name="colorPrimaryDark">@color/blue4</item>

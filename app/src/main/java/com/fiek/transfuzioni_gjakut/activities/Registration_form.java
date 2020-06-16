@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -22,13 +23,13 @@ import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 
 public class Registration_form extends AppCompatActivity {
 
-    TextView tvSignIn;
-    EditText etFName, etLName, etEmail, etPassword, etTelephone, etAddress;
-    RadioButton  radioButton;
-    Button btnRegister;
-    Spinner spinner;
-    CheckBox cbDonor;
-    RadioGroup radioGroup;
+//    TextView tvSignIn;
+//    EditText etFName, etLName, etEmail, etPassword, etTelephone, etAddress;
+//    RadioButton  radioButton;
+//    Button btnRegister;
+//    Spinner spinner;
+//    CheckBox cbDonor;
+//    RadioGroup radioGroup;
 
 
 
@@ -39,83 +40,100 @@ public class Registration_form extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
 
-        etFName = findViewById(R.id.EditTextFirstName);
-        etLName =  findViewById(R.id.EditTextLastName);
-//        rbFemale =  findViewById(R.id.radioButtonFemale);
-//        rbMale =  findViewById(R.id.radioButtonMale);
-        etEmail = findViewById(R.id.EditTextEmailAddress);
-        etPassword =  findViewById(R.id.EditTextPassword);
-        etTelephone =  findViewById(R.id.EditTextTelephone);
-        etAddress =  findViewById(R.id.EditTextAddress);
-        btnRegister =  findViewById(R.id.buttonSave);
-        spinner =  findViewById(R.id.spinner);
-        cbDonor =  findViewById(R.id.checkBoxDonor);
-        radioGroup = findViewById(R.id.radioGroup);
-
-        cbDonor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(cbDonor.isChecked() == true){
-                    return;
-                }
-
-            }
-        });
-
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Registration_form.this, Login_form.class);
-                startActivity(intent);
-
-                int radioButtonId = radioGroup.getCheckedRadioButtonId();
-                radioButton = findViewById(radioButtonId);
-            }
-        });
+//        etFName = findViewById(R.id.EditTextFirstName);
+//        etLName =  findViewById(R.id.EditTextLastName);
+////        rbFemale =  findViewById(R.id.radioButtonFemale);
+////        rbMale =  findViewById(R.id.radioButtonMale);
+//        etEmail = findViewById(R.id.EditTextEmailAddress);
+//        etPassword =  findViewById(R.id.EditTextPassword);
+//        etTelephone =  findViewById(R.id.EditTextTelephone);
+//        etAddress =  findViewById(R.id.EditTextAddress);
+//        btnRegister =  findViewById(R.id.buttonSave);
+//        spinner =  findViewById(R.id.spinner);
+//        cbDonor =  findViewById(R.id.checkBoxDonor);
+//        radioGroup = findViewById(R.id.radioGroup);
 
 
-        tvSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Login_form.class);
-                startActivity(intent);
-            }
-        });
-    }
+//        Spinner spinner = findViewById(R.id.spinner);
+//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+//                R.array.numbers, android.R.layout.simple_spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(this);
+//
+//
+//        @Override
+//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//            String text = parent.getItemAtPosition(position).toString();
+//            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+//        }
+//        @Override
+//        public void onNothingSelected(AdapterView<?> parent) {
+//        }
+//
+//
+//        cbDonor.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(cbDonor.isChecked() == true){
+//                    return;
+//                }
+//
+//            }
+//        });
+
+//        btnRegister.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Registration_form.this, Login_form.class);
+//                startActivity(intent);
+//
+//                int radioButtonId = radioGroup.getCheckedRadioButtonId();
+//                radioButton = findViewById(radioButtonId);
+//            }
+//        });
+//
+//
+//        tvSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), Login_form.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
+//
+//
+//
+//    public  void SetValidation() {
+//        //Check for a valid name
+//
+//        int radioId = radioGroup.getCheckedRadioButtonId();
+//
+//        if(radioId == -1){
+////            Toast.makeText(MainActivity.this, "Click one", Toast.LENGTH_SHORT).show();
+//           return;
+//        }
+//        if(!cbDonor.isChecked()){
+////            Toast.makeText(MainActivity.this, "You should check this", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+////        Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+//    }
+//
+//    public void onRadioButtonClicked(View v){
+//
+//        int radioButtonId = radioGroup.getCheckedRadioButtonId();
+//        radioButton = findViewById(radioButtonId);
+//        Toast.makeText(this, "Selected Blood Type: " + radioButton.getText(),
+//                Toast.LENGTH_SHORT).show();
+//
+//    }
+//
 
 
-
-    public  void SetValidation() {
-        //Check for a valid name
-
-        int radioId = radioGroup.getCheckedRadioButtonId();
-
-        if(radioId == -1){
-//            Toast.makeText(MainActivity.this, "Click one", Toast.LENGTH_SHORT).show();
-           return;
-        }
-        if(!cbDonor.isChecked()){
-//            Toast.makeText(MainActivity.this, "You should check this", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-//        Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
-    }
-
-    public void onRadioButtonClicked(View v){
-
-        int radioButtonId = radioGroup.getCheckedRadioButtonId();
-        radioButton = findViewById(radioButtonId);
-        Toast.makeText(this, "Selected Blood Type: " + radioButton.getText(),
-                Toast.LENGTH_SHORT).show();
-
-    }
+        //Check for valid surname
 
 
-
-
-
-    //Check for valid surname
-
-
-}
+    }}

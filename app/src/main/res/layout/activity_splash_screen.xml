@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout"
+    tools:context="com.fiek.transfuzioni_gjakut.splashScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:background="@drawable/blue2"
+            android:layout_centerHorizontal="true"/>
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/blue3"
+            android:layout_toRightOf="@+id/first_line"/>
+        <View
+            android:id="@+id/third_line"
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:background="@drawable/blue4"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/second_line"/>
+        <View
+            android:id="@+id/fourth_left"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            android:background="@drawable/blue5"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/third_line"/>
+
+        <View
+            android:id="@+id/first_linee"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            android:background="@drawable/blue2"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/fourth_left"/>
+        <View
+            android:id="@+id/second_linee"
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/blue3"
+            android:layout_toRightOf="@+id/first_linee"/>
+        <View
+            android:id="@+id/third_linee"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:background="@drawable/blue4"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/second_linee"/>
+        <View
+            android:id="@+id/fourth_linee"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:background="@drawable/blue5"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/third_linee"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bloodDonation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/baloo"
+            android:paddingTop="100dp"
+            android:text="Blood Donation"
+            android:textColor="@color/redwall"
+            android:textSize="50sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:id="@+id/tagLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="cursive"
+                android:padding="20dp"
+                android:text="Blood donation will cost you nothing but it will save a life"
+                android:textColor="@color/redwall"
+                android:textSize="20sp"
+                 />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
