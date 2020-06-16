@@ -2,61 +2,61 @@ package com.fiek.transfuzioni_gjakut;
 
 public class addDonorDataInsert {
 
-    private String Emri;
-    private String Mbiemri;
-    private String Email;
-    private String TipiGjakut;
-    private String Telefoni;
-    private Integer Sasia;
+    private String emri;
+    private String mbiemri;
+    private String email;
+    private String tipiGjakut;
+    private String telefoni;
+    private Integer sasia;
 
     public addDonorDataInsert() {
     }
 
     public String getEmri() {
-        return Emri;
+        return emri;
     }
 
     public void setEmri(String emri) {
-        Emri = emri;
+        this.emri = emri;
     }
 
     public String getMbiemri() {
-        return Mbiemri;
+        return mbiemri;
     }
 
     public void setMbiemri(String mbiemri) {
-        Mbiemri = mbiemri;
+        this.mbiemri = mbiemri;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getTipiGjakut() {
-        return TipiGjakut;
+        return tipiGjakut;
     }
 
     public void setTipiGjakut(String tipiGjakut) {
-        TipiGjakut = tipiGjakut;
+        this.tipiGjakut = tipiGjakut;
     }
 
     public String getTelefoni() {
-        return Telefoni;
+        return telefoni;
     }
 
     public void setTelefoni(String telefoni) {
-        Telefoni = telefoni;
+        this.telefoni = telefoni;
     }
 
     public Integer getSasia() {
-        return Sasia;
+        return sasia;
     }
 
     public void setSasia(Integer sasia) {
-        Sasia = sasia;
+        this.sasia = sasia;
     }
 }

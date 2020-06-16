@@ -24,6 +24,7 @@ public class ShtoDhurues extends AppCompatActivity {
     EditText add_donor_name, add_donor_surname,add_donor_email,add_donor_phone,add_donor_quantity ;
     DatabaseReference reff;
 
+
     addDonorDataInsert shtoDhurues;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class ShtoDhurues extends AppCompatActivity {
         radioGroup = findViewById(R.id.add_donor_radioGroup);
         Button buttonAdd = findViewById(R.id.add_donor_add_btn);
 
+
+        reff = FirebaseDatabase.getInstance().getReference().child("ShtoDhurues");
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,24 +53,25 @@ public class ShtoDhurues extends AppCompatActivity {
                 radioButton = findViewById(radioId);
 
                 //Qeto posht duhet mi rujt ne databaz
-                String blodTypeChecked = radioButton.getText().toString().trim(); // GRUPI GJAKUT
+               String blodTypeChecked = radioButton.getText().toString().trim(); // GRUPI GJAKUT
                 String email =  add_donor_email.getText().toString().trim(); //IMELLA
                 String name = add_donor_name.getText().toString().trim(); //EMRI
                 String surname = add_donor_surname.getText().toString().trim(); //MBIEMRI
                 String telefoni = add_donor_phone.getText().toString().trim(); //TELEFONI
-                Integer sasia = Integer.parseInt(add_donor_quantity.getText().toString().trim()); //SASIA
+                int sasia = Integer.parseInt(add_donor_quantity.getText().toString().trim()); //SASIA
 
-                add_donor_title.setText(name);
+                add_donor_title.setText(radioButton.getText().toString().trim());
+                shtoDhurues = new addDonorDataInsert();
 
-//                shtoDhurues.setEmri(name);
+                shtoDhurues.setEmri(name);
                 shtoDhurues.setTipiGjakut(blodTypeChecked);
                 shtoDhurues.setEmail(email);
                 shtoDhurues.setMbiemri(surname);
                 shtoDhurues.setTelefoni(telefoni);
                 shtoDhurues.setSasia(sasia);
 
-                reff = FirebaseDatabase.getInstance().getReference().child("shtoDhurues");
-                shtoDhurues = new addDonorDataInsert();
+
+
                 reff.push().setValue(shtoDhurues);
 
 //                Toast.makeText(this, "Selected Blood Type: " + name,
