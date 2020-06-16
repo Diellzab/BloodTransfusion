@@ -10,6 +10,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+
         <TextView
             android:id="@+id/textViewRegistration"
             android:layout_width="match_parent"
@@ -23,6 +25,9 @@
 
             />
 
+
+
+
         <TextView
             android:id="@+id/textViewFirstName"
             android:layout_width="match_parent"
@@ -35,6 +40,9 @@
             android:layout_marginRight="30dp"
              />
 
+
+
+
         <EditText
             android:id="@+id/EditTextFirstName"
             android:layout_width="match_parent"
@@ -43,6 +51,8 @@
             android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
             android:inputType="text"/>
+
+
 
         <TextView
             android:id="@+id/textViewLastName"
@@ -57,6 +67,7 @@
 
             />
 
+
         <EditText
             android:id="@+id/EditTextLastName"
             android:layout_width="match_parent"
@@ -65,6 +76,7 @@
             android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             android:inputType="text"/>
+
 
         <TextView
             android:id="@+id/TextViewGender"
@@ -80,7 +92,7 @@
 
 
         <RadioGroup
-            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -93,6 +105,7 @@
                 android:text="Female"
                 android:textColor="@color/blue4"
                 android:id="@+id/radioButtonFemale"
+                android:clickable="true"
                 android:onClick="onRadioButtonClicked"/>
             <RadioButton
                 android:layout_width="wrap_content"
@@ -100,6 +113,7 @@
                 android:id="@+id/radioButtonMale"
                 android:textColor="@color/blue4"
                 android:onClick="onRadioButtonClicked"
+                android:clickable="true"
                 android:text="Male"/>
 
 
@@ -116,6 +130,8 @@
             android:textColor="@color/blue4"
             android:textSize="15dp"
             />
+
+
         <EditText
             android:id="@+id/EditTextTelephone"
             android:layout_width="match_parent"
@@ -125,6 +141,8 @@
             android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             />
+
+
 
         <TextView
             android:id="@+id/textViewEmailAddress"
@@ -138,6 +156,8 @@
             android:layout_marginRight="30dp"
             />
 
+
+
         <EditText
             android:id="@+id/EditTextEmailAddress"
             android:layout_width="match_parent"
@@ -146,6 +166,8 @@
             android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             android:inputType="text"/>
+
+
 
 
 
@@ -160,6 +182,8 @@
             android:textColor="@color/blue4"
             android:textSize="15dp"
             />
+
+
         <EditText
             android:id="@+id/EditTextPassword"
             android:layout_width="match_parent"
@@ -169,6 +193,8 @@
             android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             />
+
+
 
         <TextView
             android:id="@+id/textViewAddress"
@@ -181,6 +207,8 @@
             android:layout_marginTop="7dp"
             android:layout_marginRight="30dp"
             />
+
+
         <EditText
             android:id="@+id/EditTextAddress"
             android:layout_width="match_parent"
@@ -189,6 +217,8 @@
             android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             android:inputType="text"/>
+
+
 
         <TextView
             android:layout_width="match_parent"
