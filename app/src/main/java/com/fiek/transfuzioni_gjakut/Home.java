@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.fiek.transfuzioni_gjakut.activities.Login_form;
 import com.fiek.transfuzioni_gjakut.activities.Registration_form;
+import com.fiek.transfuzioni_gjakut.forms.LoginForm;
 
 public class Home extends AppCompatActivity {
     Button btnHomeLogin, btnHomeSingUP;
@@ -26,7 +27,7 @@ public class Home extends AppCompatActivity {
         btnHomeLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent  = new Intent(Home.this, Login_form.class);
+                Intent intent  = new Intent(Home.this, LoginForm.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +36,7 @@ public class Home extends AppCompatActivity {
         btnHomeSingUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Home.this, Registration_form.class);
+                Intent intent = new Intent(Home.this, Registration_form .class);
                 startActivity(intent);
             }
         });

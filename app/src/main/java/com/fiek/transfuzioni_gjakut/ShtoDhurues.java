@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fiek.transfuzioni_gjakut.forms.AddDepozitaClass;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,8 +24,9 @@ public class ShtoDhurues extends AppCompatActivity {
     TextView add_donor_title;
     EditText add_donor_name, add_donor_surname,add_donor_email,add_donor_phone,add_donor_quantity ;
     DatabaseReference reff;
+    DatabaseReference reffDepozita;
 
-
+    AddDepozitaClass shtoNeDepozit;
     addDonorDataInsert shtoDhurues;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
 
         reff = FirebaseDatabase.getInstance().getReference().child("ShtoDhurues");
+        reffDepozita = FirebaseDatabase.getInstance().getReference().child("Depozita");
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +65,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                 add_donor_title.setText(radioButton.getText().toString().trim());
                 shtoDhurues = new addDonorDataInsert();
+                shtoNeDepozit = new AddDepozitaClass();
 
                 shtoDhurues.setEmri(name);
                 shtoDhurues.setTipiGjakut(blodTypeChecked);
@@ -70,9 +74,11 @@ public class ShtoDhurues extends AppCompatActivity {
                 shtoDhurues.setTelefoni(telefoni);
                 shtoDhurues.setSasia(sasia);
 
-
+                shtoNeDepozit.setTipiGjakut(blodTypeChecked);
+                shtoNeDepozit.setSasiaGjakut(sasia);
 
                 reff.push().setValue(shtoDhurues);
+                reffDepozita.push().setValue(shtoNeDepozit);
 
 //                Toast.makeText(this, "Selected Blood Type: " + name,
 //                        Toast.LENGTH_SHORT).show();
