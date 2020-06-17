@@ -16,6 +16,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.forms.LoginForm;
@@ -36,6 +39,8 @@ public class Registration_form extends AppCompatActivity {
     RadioGroup radioGroupBloodType;
     RadioButton radioButtonBloodType;
 
+    AwesomeValidation awesomeValidation;
+
 
 
     @Override
@@ -55,8 +60,15 @@ public class Registration_form extends AppCompatActivity {
         radioGroupBloodType = findViewById(R.id.add_donor_radioGroupRegister);
 
 
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+        awesomeValidation.addValidation(this,R.id.first_name_id, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
+        awesomeValidation.addValidation(this,R.id.last_name_id, RegexTemplate.NOT_EMPTY,R.string.invalid_surnname);
+        awesomeValidation.addValidation(this, R.id.emailAddress_id, android.util.Patterns.EMAIL_ADDRESS, R.string.err_email);
+        awesomeValidation.addValidation(this, R.id.phone_number_id, RegexTemplate.TELEPHONE, R.string.err_tel);
+        awesomeValidation.addValidation(this,R.id.address_id, RegexTemplate.NOT_EMPTY,R.string.invalid_adress);
 
-
+        String regexPassword = "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d])(?=.*[~`!@#\\$%\\^&\\*\\(\\)\\-_\\+=\\{\\}\\[\\]\\|\\;:\"<>,./\\?]).{8,}";
+        awesomeValidation.addValidation(this, R.id.password_id, regexPassword, R.string.err_password);
 //
 //
 //        @Override
@@ -82,27 +94,35 @@ public class Registration_form extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Registration_form.this, LoginForm.class);
-                startActivity(intent);
 
-                int radioButtonIdMF = radioGroupMF.getCheckedRadioButtonId();
-                radioButtonMF = findViewById(radioButtonIdMF);
 
-                int radioButtonIdBloodType = radioGroupBloodType.getCheckedRadioButtonId();
-                radioButtonBloodType = findViewById(radioButtonIdBloodType);
+                if (awesomeValidation.validate()) {
+
+                    int radioButtonIdMF = radioGroupMF.getCheckedRadioButtonId();
+                    radioButtonMF = findViewById(radioButtonIdMF);
+
+                    int radioButtonIdBloodType = radioGroupBloodType.getCheckedRadioButtonId();
+                    radioButtonBloodType = findViewById(radioButtonIdBloodType);
 
 
 //              Qeto ki mi shti n'datanaz
-                String MaleFemale = radioButtonMF.getText().toString().trim(); // MaleFemale
-                String emri = etFName.getText().toString().trim(); // Emri
-                String mbiemri = etLName.getText().toString().trim(); // Mbiemri
-                String email = etEmail.getText().toString().trim(); // Email
-                String telefoni = etTelephone.getText().toString().trim(); // Phone
-                String password = etPassword.getText().toString().trim(); // Password
-                String adresa = etAddress.getText().toString().trim(); // Adresa
-                String blood_type_register = radioButtonBloodType.getText().toString().trim(); // MaleFemale
+                    String MaleFemale = radioButtonMF.getText().toString().trim(); // MaleFemale
+                    String emri = etFName.getText().toString().trim(); // Emri
+                    String mbiemri = etLName.getText().toString().trim(); // Mbiemri
+                    String email = etEmail.getText().toString().trim(); // Email
+                    String telefoni = etTelephone.getText().toString().trim(); // Phone
+                    String password = etPassword.getText().toString().trim(); // Password
+                    String adresa = etAddress.getText().toString().trim(); // Adresa
+                    String blood_type_register = radioButtonBloodType.getText().toString().trim(); // MaleFemale
 
 
+                    Intent intent = new Intent(Registration_form.this, LoginForm.class);
+                    startActivity(intent);
+                }
+
+                else {
+                    Toast.makeText(getApplicationContext(),"Validation Failed. ", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

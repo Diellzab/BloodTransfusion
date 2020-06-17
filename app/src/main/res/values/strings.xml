@@ -27,6 +27,12 @@
     <string name="hello">Hello</string>
     <string name="blood_ttransfusion">Blood Transfusion</string>
     <string name="blood_transfusion">Blood Transfusion</string>
+    <string name="invalid_name">Enter a valid name</string>
+    <string name="invalid_surnname">Invalid surname</string>
+    <string name="err_email">Invalid email</string>
+    <string name="err_tel">Invalid phone number</string>
+    <string name="invalid_adress">Invalid adress</string>
+    <string name="err_password">Invalid password</string>
     <string-array name="type">
         <item>A+</item>
         <item>A-</item>
