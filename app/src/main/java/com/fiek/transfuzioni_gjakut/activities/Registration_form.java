@@ -87,8 +87,11 @@ public class Registration_form extends AppCompatActivity {
                 Intent intent = new Intent(Registration_form.this, LoginForm.class);
                 startActivity(intent);
 
-//                int radioButtonId = radioGroup.getCheckedRadioButtonId();
-//                radioButton = findViewById(radioButtonId);
+                int radioButtonIdMF = radioGroupMF.getCheckedRadioButtonId();
+                radioButton = findViewById(radioButtonIdMF);
+
+                String MaleFemale = radioButtonMF.getText().toString().trim(); // MaleFemale
+                
             }
         });
 //

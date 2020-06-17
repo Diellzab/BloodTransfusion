@@ -23,8 +23,8 @@ public class depoistFragment extends Fragment {
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.depoist_fragment, container, false);
 
-        text = (TextView) view.findViewById(R.id.texti);
-        btn = (Button) view.findViewById(R.id.btn);
+//        text = (TextView) view.findViewById(R.id    .texti);
+//        btn = (Button) view.findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
