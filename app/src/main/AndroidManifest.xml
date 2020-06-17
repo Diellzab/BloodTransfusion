@@ -16,9 +16,15 @@
 
         </activity>
         <activity android:name=".splashScreen"></activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home">
+
+
+        </activity>
         <activity android:name=".activities.Coronavirus_Cases" />
-        <activity android:name=".activities.Registration_form"></activity>
+        <activity android:name=".activities.Registration_form">
+
+
+        </activity>
         <activity android:name=".forms.RegistrationForm" />
         <activity android:name=".forms.LoginForm">
 
@@ -32,7 +38,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

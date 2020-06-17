@@ -18,6 +18,7 @@
         android:text="Add Blood Reciever"
         android:padding="10dp"
         android:textColor="@color/blue4"
+        android:fontFamily="@font/amiko"
         android:textStyle="bold"
         android:textSize="30dp"
         android:id="@+id/add_donor_title_reciever"
@@ -85,6 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Blod Type"
+        android:fontFamily="@font/rajdhani_light"
         android:gravity="center"
         />
 
@@ -103,6 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:text="A+"
             android:textSize="10dp"
@@ -115,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:textSize="10dp"
             android:text="A-" />
@@ -125,6 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_weight="1"
             android:text="B+" />
@@ -134,6 +139,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -144,6 +150,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -153,6 +160,7 @@
             android:id="@+id/ABnegativ"
             android:textSize="10dp"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/rajdhani_light"
             android:clickable="true"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
@@ -164,6 +172,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -174,6 +183,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -217,8 +227,15 @@
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="ADD"
+        android:background="@drawable/other_button"
+        android:textColor="@color/blue4"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        android:fontFamily="@font/numans"
         android:id="@+id/add_donor_add_btn_reciever"
         />
 </LinearLayout>
