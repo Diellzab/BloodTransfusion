@@ -23,6 +23,8 @@ import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.forms.LoginForm;
 import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Registration_form extends AppCompatActivity {
@@ -41,7 +43,8 @@ public class Registration_form extends AppCompatActivity {
 
     AwesomeValidation awesomeValidation;
 
-
+    DatabaseReference reffUser;
+    AddUserClass addUserClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,9 @@ public class Registration_form extends AppCompatActivity {
 //        cbDonor =  findViewById(R.id.checkBoxDonor);
         radioGroupMF = findViewById(R.id.genderRadioGroup);
         radioGroupBloodType = findViewById(R.id.add_donor_radioGroupRegister);
+
+
+        reffUser = FirebaseDatabase.getInstance().getReference().child("User");
 
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -114,6 +120,18 @@ public class Registration_form extends AppCompatActivity {
                     String adresa = etAddress.getText().toString().trim(); // Adresa
                     String blood_type_register = radioButtonBloodType.getText().toString().trim(); // MaleFemale
 
+                    addUserClass = new AddUserClass();
+
+                    addUserClass.setEmri(emri);
+                    addUserClass.setMbiemri(mbiemri);
+                    addUserClass.setEmail(email);
+                    addUserClass.setTelefoni(telefoni);
+                    addUserClass.setMaleFemale(MaleFemale);
+                    addUserClass.setPassword(password);
+                    addUserClass.setAdresa(adresa);
+                    addUserClass.setTipiGjakut(blood_type_register);
+
+                    reffUser.push().setValue(addUserClass);
 
                     Intent intent = new Intent(Registration_form.this, LoginForm.class);
                     startActivity(intent);
