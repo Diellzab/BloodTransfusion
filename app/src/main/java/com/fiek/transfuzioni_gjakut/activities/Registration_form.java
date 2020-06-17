@@ -193,5 +193,4 @@ public class Registration_form extends AppCompatActivity {
         Intent intent = new Intent(Registration_form.this, LoginForm.class);
         startActivity(intent);
     }
-
 }

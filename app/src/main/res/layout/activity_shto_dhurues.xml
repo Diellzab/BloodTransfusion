@@ -72,6 +72,7 @@
             android:onClick="add_donor_bloobType_onclick_method"
             android:text="A+"
             android:textSize="10dp"
+            android:checked="true"
             />
 
         <RadioButton
