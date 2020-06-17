@@ -41,12 +41,10 @@ public class Registration_form extends AppCompatActivity {
 
         etFName = findViewById(R.id.first_name_id);
         etLName =  findViewById(R.id.last_name_id);
-//        rbFemale =  findViewById(R.id.radioButtonFemale);
-////        rbMale =  findViewById(R.id.radioButtonMale);
-//        etEmail = findViewById(R.id.EditTextEmailAddress);
-//        etPassword =  findViewById(R.id.EditTextPassword);
-//        etTelephone =  findViewById(R.id.EditTextTelephone);
-//        etAddress =  findViewById(R.id.EditTextAddress);
+        etEmail = findViewById(R.id.emailAddress_id);
+        etPassword =  findViewById(R.id.password_id);
+        etTelephone =  findViewById(R.id.phone_number_id);
+        etAddress =  findViewById(R.id.address_id);
         btnRegister =  findViewById(R.id.buttonSave);
 //        spinner =  findViewById(R.id.spinner);
 //        cbDonor =  findViewById(R.id.checkBoxDonor);
@@ -90,8 +88,17 @@ public class Registration_form extends AppCompatActivity {
                 int radioButtonIdMF = radioGroupMF.getCheckedRadioButtonId();
                 radioButton = findViewById(radioButtonIdMF);
 
+
+//              Qeto ki mi shti n'datanaz
                 String MaleFemale = radioButtonMF.getText().toString().trim(); // MaleFemale
-                
+                String emri = etFName.getText().toString().trim(); // Emri
+                String mbiemri = etLName.getText().toString().trim(); // Mbiemri
+                String email = etEmail.getText().toString().trim(); // Email
+                String telefoni = etTelephone.getText().toString().trim(); // Phone
+                String password = etPassword.getText().toString().trim(); // Password
+                String adresa = etAddress.getText().toString().trim(); // Adresa
+
+
             }
         });
 //
