@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,12 +26,15 @@ public class Registration_form extends AppCompatActivity {
 
     TextView tvSignIn;
     EditText etFName, etLName, etEmail, etPassword, etTelephone, etAddress;
-    RadioButton  radioButton;
+
     Button btnRegister;
     Spinner spinner;
     CheckBox cbDonor;
     RadioGroup radioGroupMF;
     RadioButton radioButtonMF;
+
+    RadioGroup radioGroupBloodType;
+    RadioButton radioButtonBloodType;
 
 
 
@@ -46,17 +50,13 @@ public class Registration_form extends AppCompatActivity {
         etTelephone =  findViewById(R.id.phone_number_id);
         etAddress =  findViewById(R.id.address_id);
         btnRegister =  findViewById(R.id.buttonSave);
-//        spinner =  findViewById(R.id.spinner);
 //        cbDonor =  findViewById(R.id.checkBoxDonor);
         radioGroupMF = findViewById(R.id.genderRadioGroup);
+        radioGroupBloodType = findViewById(R.id.add_donor_radioGroupRegister);
 
 
-//        Spinner spinner = findViewById(R.id.spinner);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.numbers, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(this);
+
+
 //
 //
 //        @Override
@@ -86,7 +86,10 @@ public class Registration_form extends AppCompatActivity {
                 startActivity(intent);
 
                 int radioButtonIdMF = radioGroupMF.getCheckedRadioButtonId();
-                radioButton = findViewById(radioButtonIdMF);
+                radioButtonMF = findViewById(radioButtonIdMF);
+
+                int radioButtonIdBloodType = radioGroupBloodType.getCheckedRadioButtonId();
+                radioButtonBloodType = findViewById(radioButtonIdBloodType);
 
 
 //              Qeto ki mi shti n'datanaz
@@ -97,23 +100,13 @@ public class Registration_form extends AppCompatActivity {
                 String telefoni = etTelephone.getText().toString().trim(); // Phone
                 String password = etPassword.getText().toString().trim(); // Password
                 String adresa = etAddress.getText().toString().trim(); // Adresa
+                String blood_type_register = radioButtonBloodType.getText().toString().trim(); // MaleFemale
 
 
             }
         });
-//
-//
-//        tvSignIn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), Login_form.class);
-//                startActivity(intent);
-//            }
-//        });
-//    }
-//
-//
-//
+
+
 //    public  void SetValidation() {
 //        //Check for a valid name
 //
@@ -139,10 +132,7 @@ public class Registration_form extends AppCompatActivity {
 //                Toast.LENGTH_SHORT).show();
 //
 //    }
-//
 
-
-        //Check for valid surname
 
 
     }
@@ -154,4 +144,12 @@ public class Registration_form extends AppCompatActivity {
         Toast.makeText(this,  radioButtonMF.getText(),
                 Toast.LENGTH_SHORT).show();
     }
+
+    public void add_donor_bloobType_onclick_methodRegister(View v) {
+        int radioId = radioGroupBloodType.getCheckedRadioButtonId();
+        radioButtonBloodType = findViewById(radioId);
+        Toast.makeText(this,  radioButtonBloodType.getText(),
+                Toast.LENGTH_SHORT).show();
+    }
+
 }

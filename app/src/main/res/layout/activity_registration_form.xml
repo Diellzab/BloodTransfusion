@@ -216,13 +216,99 @@
             android:layout_marginRight="30dp"
 
             android:text="Type of Blood"/>
-        <Spinner
+
+
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_marginLeft="30dp"
-            android:entries="@array/type"/>
+            android:id="@+id/add_donor_radioGroupRegister"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            >
 
+
+            <RadioButton
+                android:id="@+id/Apozitiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:text="A+"
+                android:textSize="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/Anegativ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:textSize="10dp"
+                android:text="A-" />
+
+            <RadioButton
+                android:id="@+id/Bpozitiv"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_weight="1"
+                android:text="B+" />
+
+            <RadioButton
+                android:id="@+id/Bnegativ"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B-" />
+
+            <RadioButton
+                android:id="@+id/ABpozitiv"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AB+" />
+
+            <RadioButton
+                android:id="@+id/ABnegativ"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AB-" />
+
+            <RadioButton
+                android:id="@+id/Opozitiv"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O+" />
+
+            <RadioButton
+                android:id="@+id/Onegativ"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="add_donor_bloobType_onclick_methodRegister"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="O-" />
+        </RadioGroup>
 
         <CheckBox
             android:layout_width="match_parent"
