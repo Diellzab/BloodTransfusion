@@ -13,9 +13,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Blood Donor"
+        android:text="Add Blood Reciever"
         android:textSize="30dp"
-        android:id="@+id/add_donor_title"
+        android:id="@+id/add_donor_title_reciever"
         android:layout_margin="5dp"
         android:gravity="center"
         />
@@ -26,7 +26,7 @@
         android:layout_margin="5dp"
         android:hint="Name"
         android:gravity="center"
-        android:id="@+id/add_donor_name"
+        android:id="@+id/add_donor_name_reciever"
         />
 
     <EditText
@@ -35,14 +35,14 @@
         android:layout_margin="5dp"
         android:hint="Surname"
         android:gravity="center"
-        android:id="@+id/add_donor_surname"
+        android:id="@+id/add_donor_surname_reciever"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:id="@+id/add_donor_email"
+        android:id="@+id/add_donor_email_reciever"
         android:hint="Email"
         android:gravity="center"
         />
@@ -58,7 +58,7 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/add_donor_radioGroup"
+        android:id="@+id/add_donor_radioGroup_reciever"
         android:orientation="horizontal"
         >
 
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:text="A+"
             android:textSize="10dp"
             android:checked="true"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:textSize="10dp"
             android:text="A-" />
 
@@ -91,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_weight="1"
             android:text="B+" />
 
@@ -100,7 +100,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="B-" />
@@ -110,7 +110,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="AB+" />
@@ -120,7 +120,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="AB-" />
@@ -130,7 +130,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="O+" />
@@ -140,7 +140,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
-            android:onClick="add_donor_bloobType_onclick_method"
+            android:onClick="add_donor_bloobType_onclick_method_reciever"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="O-" />
@@ -151,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center"
-        android:id="@+id/add_donor_phone"
+        android:id="@+id/add_donor_phone_reciever"
         android:hint="Phone"
         />
 
@@ -159,15 +159,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Blood quantity given ML"
+        android:hint="Recieived blood quantity given ML"
         android:layout_margin="5dp"
-        android:id="@+id/add_donor_quantity"
+        android:id="@+id/add_donor_quantity_reciever"
         />
-    
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ADD"
-            android:id="@+id/add_donor_add_btn"
-            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/add_donor_add_btn_reciever"
+        />
 </LinearLayout>
