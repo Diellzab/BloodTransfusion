@@ -43,7 +43,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
 
         reff = FirebaseDatabase.getInstance().getReference().child("ShtoDhurues");
-        reffDepozita = FirebaseDatabase.getInstance().getReference().child("Depozita");
+        reffDepozita = FirebaseDatabase.getInstance().getReference().child("DepozitaPlus");
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this,R.id.add_donor_name, RegexTemplate.NOT_EMPTY,R.string.invalid_name);

@@ -74,27 +74,8 @@ public class Registration_form extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.address_id, RegexTemplate.NOT_EMPTY,R.string.invalid_adress);
 
         awesomeValidation.addValidation(this, R.id.password_id, ".{6,}", R.string.err_password);
-//
-//
-//        @Override
-//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//            String text = parent.getItemAtPosition(position).toString();
-//            Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
-//        }
-//        @Override
-//        public void onNothingSelected(AdapterView<?> parent) {
-//        }
-//
-//
-//        cbDonor.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(cbDonor.isChecked() == true){
-//                    return;
-//                }
-//
-//            }
-//        });
+
+        
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,33 +123,6 @@ public class Registration_form extends AppCompatActivity {
                 }
             }
         });
-
-
-//    public  void SetValidation() {
-//        //Check for a valid name
-//
-//        int radioId = radioGroup.getCheckedRadioButtonId();
-//
-//        if(radioId == -1){
-////            Toast.makeText(MainActivity.this, "Click one", Toast.LENGTH_SHORT).show();
-//           return;
-//        }
-//        if(!cbDonor.isChecked()){
-////            Toast.makeText(MainActivity.this, "You should check this", Toast.LENGTH_SHORT).show();
-//            return;
-//        }
-//
-////        Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
-//    }
-//
-//    public void onRadioButtonClicked(View v){
-//
-//        int radioButtonId = radioGroup.getCheckedRadioButtonId();
-//        radioButton = findViewById(radioButtonId);
-//        Toast.makeText(this, "Selected Blood Type: " + radioButton.getText(),
-//                Toast.LENGTH_SHORT).show();
-//
-//    }
 
 
 
