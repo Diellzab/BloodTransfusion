@@ -12,11 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.ShtoMarres">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".splashScreen"></activity>
@@ -24,8 +20,16 @@
         <activity android:name=".activities.Coronavirus_Cases" />
         <activity android:name=".activities.Registration_form"></activity>
         <activity android:name=".forms.RegistrationForm" />
-        <activity android:name=".forms.LoginForm"></activity>
+        <activity android:name=".forms.LoginForm">
+
+        </activity>
         <activity android:name=".ShtoDhurues">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".MainActivity" />

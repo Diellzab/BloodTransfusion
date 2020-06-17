@@ -7,6 +7,8 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/background_layout"
     tools:context="com.fiek.transfuzioni_gjakut.ShtoDhurues">
 
 
@@ -14,12 +16,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Blood Donor"
+        android:textColor="@color/blue4"
+        android:padding="10dp"
+        android:textStyle="bold"
         android:textSize="30dp"
         android:id="@+id/add_donor_title"
         android:layout_margin="5dp"
         android:gravity="center"
         />
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +38,13 @@
         android:gravity="center"
         android:id="@+id/add_donor_name"
         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
 
     <EditText
         android:layout_width="match_parent"
@@ -38,6 +55,13 @@
         android:id="@+id/add_donor_surname"
         />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +70,8 @@
         android:hint="Email"
         android:gravity="center"
         />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -146,6 +172,11 @@
             android:text="O-" />
     </RadioGroup>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -155,6 +186,16 @@
         android:hint="Phone"
         />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -163,6 +204,8 @@
         android:layout_margin="5dp"
         android:id="@+id/add_donor_quantity"
         />
+
+    </com.google.android.material.textfield.TextInputLayout>
     
         <Button
             android:layout_width="wrap_content"
