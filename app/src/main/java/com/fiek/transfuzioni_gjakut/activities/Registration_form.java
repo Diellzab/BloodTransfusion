@@ -41,12 +41,7 @@ public class Registration_form extends AppCompatActivity {
 
         etFName = findViewById(R.id.first_name_id);
         etLName =  findViewById(R.id.last_name_id);
-//        rbFemale =  findViewById(R.id.radioButtonFemale);
-////        rbMale =  findViewById(R.id.radioButtonMale);
-//        etEmail = findViewById(R.id.EditTextEmailAddress);
-//        etPassword =  findViewById(R.id.EditTextPassword);
-//        etTelephone =  findViewById(R.id.EditTextTelephone);
-//        etAddress =  findViewById(R.id.EditTextAddress);
+
         btnRegister =  findViewById(R.id.buttonSave);
 //        spinner =  findViewById(R.id.spinner);
 //        cbDonor =  findViewById(R.id.checkBoxDonor);

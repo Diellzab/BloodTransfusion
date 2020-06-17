@@ -11,7 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".splashScreen">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".Home">
@@ -19,11 +23,7 @@
         </activity>
         <activity android:name=".activities.Coronavirus_Cases" />
         <activity android:name=".activities.Registration_form">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".forms.RegistrationForm" />
         <activity android:name=".forms.LoginForm">
