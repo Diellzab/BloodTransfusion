@@ -67,8 +67,7 @@ public class Registration_form extends AppCompatActivity {
         awesomeValidation.addValidation(this, R.id.phone_number_id, RegexTemplate.TELEPHONE, R.string.err_tel);
         awesomeValidation.addValidation(this,R.id.address_id, RegexTemplate.NOT_EMPTY,R.string.invalid_adress);
 
-        String regexPassword = "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d])(?=.*[~`!@#\\$%\\^&\\*\\(\\)\\-_\\+=\\{\\}\\[\\]\\|\\;:\"<>,./\\?]).{8,}";
-        awesomeValidation.addValidation(this, R.id.password_id, regexPassword, R.string.err_password);
+        awesomeValidation.addValidation(this, R.id.password_id, ".{6,}", R.string.err_password);
 //
 //
 //        @Override

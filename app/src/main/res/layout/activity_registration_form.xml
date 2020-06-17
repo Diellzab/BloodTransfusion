@@ -312,16 +312,7 @@
                 android:text="O-" />
         </RadioGroup>
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="30dp"
-            android:id="@+id/checkBoxDonor"
-            android:text="I want to be a Donor"
-            android:onClick="onCheckBoxClicked"
-            android:textColor="@color/blue4"/>
+
 
         <Button
             android:layout_width="match_parent"
