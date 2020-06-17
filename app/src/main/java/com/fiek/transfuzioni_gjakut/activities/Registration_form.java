@@ -189,4 +189,9 @@ public class Registration_form extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
+    public void sign_in_method_register_form(View v) {
+        Intent intent = new Intent(Registration_form.this, LoginForm.class);
+        startActivity(intent);
+    }
+
 }

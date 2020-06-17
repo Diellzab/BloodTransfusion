@@ -344,6 +344,7 @@
             android:layout_margin="5sp"
             android:textSize="25sp"
             android:clickable="true"
+            android:onClick="sign_in_method_register_form"
             android:textColor="@color/blue3"/>
 
     </LinearLayout>
