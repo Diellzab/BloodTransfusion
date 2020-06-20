@@ -349,10 +349,11 @@
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featured_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
+                    android:layout_height="300dp"
                     android:layout_toRightOf="@+id/featureBck"
-                    android:background="@color/blue1"/>
+                    android:background="@color/blue1" />
 
 
             </RelativeLayout>
