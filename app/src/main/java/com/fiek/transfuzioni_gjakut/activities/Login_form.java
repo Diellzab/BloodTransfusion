@@ -3,6 +3,7 @@ package com.fiek.transfuzioni_gjakut.activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -31,6 +32,8 @@ public class Login_form  extends AppCompatActivity {
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passwordError;
     CheckBox rememberMe;
+    private SharedPreferences mPreferences;
+    private SharedPreferences.Editor mEditor;
 
 
 
@@ -49,16 +52,13 @@ public class Login_form  extends AppCompatActivity {
 //        coronaVirusCases = (TextView) findViewById(R.id.covid_cases_text);
         rememberMe = findViewById(R.id.rememberMe);
 
-        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-        String checkbox = preferences.getString("remember", "");
-        if(checkbox.equals("true")){
-            //Intent intent = new Intent(Login_form.this, Dashboard.class);
-            //startActivity(intent);
-        }
-        else if(checkbox.equals("false")){
-            //Toast.makeText(this, "Please Sign In", Toast.LENGTH_SHORT).show();
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mPreferences.edit();
+        checkSharedPreferences();
 
-        }
+
+
+
 
         rememberMe.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -112,8 +112,49 @@ public class Login_form  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Login_form.this, Dashboard.class);
-                startActivity(intent);
+                if (rememberMe.isChecked()){
+
+                    mEditor.putString(getString(R.string.checkbox), "True");
+                    mEditor.commit();
+
+                    //save the name
+                    String username = etEmail.getText().toString();
+                    mEditor.putString(getString(R.string.username), username);
+                    mEditor.commit();
+
+                    String password = etPassword.getText().toString();
+                    mEditor.putString(getString(R.string.password), password);
+                    mEditor.commit();
+
+                    Intent intent = new Intent(Login_form.this, Dashboard.class);
+                    startActivity(intent);
+
+                    SetValidation();
+
+
+
+                }
+                else{
+
+                    mEditor.putString(getString(R.string.checkbox), "False");
+                    mEditor.commit();
+
+                    //save the name
+                    String username = etEmail.getText().toString();
+                    mEditor.putString(getString(R.string.username), "");
+                    mEditor.commit();
+
+                    String password = etPassword.getText().toString();
+                    mEditor.putString(getString(R.string.password), "");
+                    mEditor.commit();
+
+                    Intent intent = new Intent(Login_form.this, Dashboard.class);
+                    startActivity(intent);
+
+                    SetValidation();
+
+
+                }
 
             }
         });
@@ -126,6 +167,23 @@ public class Login_form  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+
+    public void checkSharedPreferences(){
+
+        String checkbox = mPreferences.getString(getString(R.string.checkbox), "false");
+        String username = mPreferences.getString(getString(R.string.username), " ");
+        String password = mPreferences.getString(getString(R.string.password), " ");
+
+        etEmail.setText(username);
+        etPassword.setText(password);
+        if (checkbox.equals("True")){
+            rememberMe.setChecked(true);
+        }else{
+            rememberMe.setChecked(false);
+        }
+
     }
 
     public  void SetValidation() {
