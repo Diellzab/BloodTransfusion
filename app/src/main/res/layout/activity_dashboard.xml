@@ -13,52 +13,419 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/menu"/>
+            android:src="@drawable/menu"
+            android:layout_centerVertical="true"/>
 
 
     </RelativeLayout>
 
-    <RelativeLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save a life"
-            android:textSize="24sp"
-            android:fontFamily="@font/rajdhani_light"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            
-            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <RelativeLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/card1"
-                android:elevation="4dp"
-                android:layout_margin="10dp">
-                
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/apozitiv"
-                    android:layout_centerInParent="true"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save a life"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/rajdhani_light"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ap"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="A Positive"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/an"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="A Negative"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/bp"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="B Positive"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/bn"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="B Negative"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/abp"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="AB Positive"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/abn"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="AB Negative"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/zerop"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="0 Positive"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/card1"
+                        android:elevation="8dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/zeron"
+                            android:layout_centerInParent="true"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="0 Negative"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/background_layout">
+
+                <LinearLayout
+                    android:id="@+id/featureBck"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:background="@color/blue2"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood"
+                        android:textSize="25dp"
+                        android:layout_marginTop="50dp"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Save a life"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_toRightOf="@+id/featureBck"
+                    android:background="@color/blue1"/>
 
 
             </RelativeLayout>
-        </LinearLayout>
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Most Searched"
+                        android:textSize="20sp"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="blood"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Most Searched"
+                        android:textSize="20sp"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="blood"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

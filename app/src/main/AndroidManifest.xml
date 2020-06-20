@@ -9,17 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Dashboard"></activity>
-        <activity android:name=".activities.ShtoMarres" />
-        <activity android:name=".splashScreen" />
-        <activity android:name=".Home" />
-        <activity android:name=".activities.Coronavirus_Cases" />
-        <activity android:name=".activities.Registration_form">
+        <activity android:name=".activities.Dashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.ShtoMarres" />
+        <activity android:name=".splashScreen" />
+        <activity android:name=".Home" />
+        <activity android:name=".activities.Coronavirus_Cases" />
+        <activity android:name=".activities.Registration_form">
+
         </activity>
         <activity android:name=".forms.RegistrationForm" />
         <activity android:name=".forms.LoginForm" />
