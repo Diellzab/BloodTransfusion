@@ -87,7 +87,12 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                
+                <CheckBox
+                    android:id="@+id/rememberMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me"
+                    android:fontFamily="@font/rajdhani_medium"/>
 
 
                 <Button
