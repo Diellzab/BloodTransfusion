@@ -2,11 +2,9 @@ package com.fiek.transfuzioni_gjakut.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,27 +13,22 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fiek.transfuzioni_gjakut.R;
-import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 import com.google.android.material.textfield.TextInputLayout;
 
-
-import java.util.regex.Pattern;
-
-public class Login_form  extends AppCompatActivity {
+public class Admin_login extends AppCompatActivity {
 
     EditText etEmail, etPassword;
     Button btnLogin, coronaVirus;
     TextView tvRegister, coronaVirusCases;
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passwordError;
-    final CheckBox checkBox = (CheckBox) findViewById(R.id.rememberMe);
 
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_form);
+        setContentView(R.layout.activity_admin_login);
 
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
@@ -48,11 +41,6 @@ public class Login_form  extends AppCompatActivity {
 
 
 
-
-
-
-
-
         coronaVirus.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -62,12 +50,11 @@ public class Login_form  extends AppCompatActivity {
                 /*
                  * Intent is just like glue which helps to navigate one activity
                  * to another.
-                 */Intent intent = new Intent(Login_form.this,
+                 */Intent intent = new Intent(Admin_login.this,
                         Coronavirus_Cases.class);
                 startActivity(intent); // startActivity allow you to move
             }
         });
-
 
 
 
