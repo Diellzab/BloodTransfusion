@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/featured_image"
             android:layout_width="match_parent"
-            android:layout_height="14dp"
+            android:layout_height="40dp"
             android:src="@drawable/apozitiv"
             android:scaleType="centerCrop"/>
         <TextView
@@ -26,18 +26,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Text"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:fontFamily="@font/rajdhani_light"/>
-        <RatingBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:rating="6"
-            style="@style/Widget.AppCompat.RatingBar.Small"/>
+
 
         <TextView
             android:id="@+id/featured_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rajdhani_medium"
+            android:textSize="16sp"
             android:text="jdhwio eihtoejb fignwi"/>
 
     </LinearLayout>

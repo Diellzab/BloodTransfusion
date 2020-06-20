@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:text="Save a life"
                     android:textSize="24sp"
-                    android:fontFamily="@font/rajdhani_light"
+                    android:fontFamily="@font/rajdhani_semibold"
                     android:layout_centerHorizontal="true"/>
             </RelativeLayout>
 
@@ -79,6 +79,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="A Positive"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -111,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="A Negative"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -143,6 +145,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="B Positive"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -175,6 +178,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="B Negative"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -216,6 +220,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="AB Positive"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -248,6 +253,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="AB Negative"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -280,6 +286,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="0 Positive"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -312,6 +319,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="0 Negative"
+                        android:fontFamily="@font/rajdhani_light"
                         android:gravity="center_horizontal"/>
 
                 </LinearLayout>
@@ -323,37 +331,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/background_layout">
+                android:background="@color/blue4">
 
                 <LinearLayout
                     android:id="@+id/featureBck"
-                    android:layout_width="170dp"
+                    android:layout_width="130dp"
                     android:layout_height="280dp"
-                    android:background="@color/blue2"
-                    android:layout_margin="10dp">
+                    android:background="@color/blue3"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Blood"
-                        android:textSize="25dp"
+                        android:text="Facts About Blood and Blood Types"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/rajdhani_semibold"
                         android:layout_marginTop="50dp"
+                        android:textColor="@color/white"
                         android:textAllCaps="true"
                         android:layout_marginLeft="10dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="Save a life"/>
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/featured_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="280dp"
                     android:layout_toRightOf="@+id/featureBck"
-                    android:background="@color/blue1" />
+                    android:background="@color/blue3" />
 
 
             </RelativeLayout>
@@ -373,20 +380,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Most Searched"
-                        android:textSize="20sp"
-                        android:textAllCaps="true"/>
+                        android:fontFamily="@font/rajdhani_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="Rarest Blood Type"
+                        android:textColor="@color/blue4"
+                        android:textAllCaps="true"
+                        android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="blood"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rarest_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"/>
 
@@ -394,35 +399,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical"
-                android:layout_marginTop="30dp"
                 android:padding="20dp"
                 >
-
-                <RelativeLayout
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="Blood Type Compatibilty"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/blue4"
+                    android:fontFamily="@font/rajdhani_medium"
+                    android:textSize="20sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Most Searched"
-                        android:textSize="20sp"
-                        android:textAllCaps="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="blood"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
-
-                </RelativeLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
-
+                    android:layout_height="200dp"
+                    android:src="@drawable/typeblood"/>
             </LinearLayout>
 
         </LinearLayout>
