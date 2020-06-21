@@ -12,6 +12,16 @@ public class addDonorDataInsert {
     public addDonorDataInsert() {
     }
 
+    public addDonorDataInsert(String emri,String mbiemri,String email,String tipiGjakut,String telefoni,int sasia) {
+    this.emri = emri;
+    this.mbiemri = mbiemri;
+    this.email = email;
+    this.tipiGjakut = tipiGjakut;
+    this.telefoni = telefoni;
+    this.sasia = sasia;
+
+    }
+
     public String getEmri() {
         return emri;
     }
