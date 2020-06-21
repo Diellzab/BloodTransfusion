@@ -50,26 +50,6 @@ public class Donoooooors extends AppCompatActivity {
         databaseArticles = FirebaseDatabase.getInstance().getReference("ShtoDhurues");
         donorsList = new ArrayList<>();
 
-//        shtoDhuruesRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-//                if ( e != null) {
-//                    return;
-//                }
-//
-//                String data ="";
-//
-//                for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-//                    addDonorDataInsert note = documentSnapshot.toObject(addDonorDataInsert.class);
-//                    String emri = note.getEmri();
-//                    String mbiemri = note.getMbiemri();
-//
-//                    data += "Emri : " + emri +" Mbiemri : "+ mbiemri;
-//                }
-//                textViewData.setText(data);
-//            }
-//        });
-
     }
 
     @Override
@@ -96,28 +76,4 @@ public class Donoooooors extends AppCompatActivity {
         });
     }
 
-    //    public void loadNotes(View v) {
-//        shtoDhuruesRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                String data = "";
-//                textViewData = findViewById(R.id.text_view_data);
-//                for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-//                    addDonorDataInsert note =   documentSnapshot.toObject(addDonorDataInsert.class);
-////                note.setEmri(documentSnapshot.getId());
-//
-////                    String documentEmri = note.getEmri();
-//                    String documentMbiemri = note.getMbiemri();
-//                    String documentEmail = note.getEmail();
-//                    String documentTelefoni = note.getTelefoni();
-////                    int documentSasia = note.getSasia();
-//                    String documentTipiGjakut = note.getTipiGjakut();
-//
-//                    data += "Emri : " + " " + documentMbiemri
-//                            + "\nEmail : " + documentEmail + "\nTelefoni : " + documentTelefoni+"\nGr Gjakut : " + documentTipiGjakut+"\nSasia : " +  "\n\n";
-//                }
-//                textViewData.setText(data);
-//            }
-//        });
-//    }
 }
