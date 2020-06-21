@@ -7,6 +7,8 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/background_layout"
     tools:context="com.fiek.transfuzioni_gjakut.ShtoDhurues">
 
 
@@ -14,20 +16,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Blood Donor"
+        android:textColor="@color/blue4"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/amiko"
         android:textSize="30dp"
         android:id="@+id/add_donor_title"
         android:layout_margin="5dp"
         android:gravity="center"
         />
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:hint="Name"
+        android:fontFamily="@font/rajdhani_light"
         android:gravity="center"
         android:id="@+id/add_donor_name"
         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
 
     <EditText
         android:layout_width="match_parent"
@@ -38,19 +57,30 @@
         android:id="@+id/add_donor_surname"
         />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:id="@+id/add_donor_email"
+        android:fontFamily="@font/rajdhani_light"
         android:hint="Email"
         android:gravity="center"
         />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Blod Type"
+        android:fontFamily="@font/rajdhani_light"
         android:gravity="center"
         />
 
@@ -71,6 +101,7 @@
             android:clickable="true"
             android:onClick="add_donor_bloobType_onclick_method"
             android:text="A+"
+            android:fontFamily="@font/rajdhani_light"
             android:textSize="10dp"
             android:checked="true"
             />
@@ -81,6 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:textSize="10dp"
             android:text="A-" />
@@ -91,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_weight="1"
             android:text="B+" />
@@ -100,6 +133,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -110,6 +144,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -120,6 +155,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -130,6 +166,7 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -140,34 +177,59 @@
             android:textSize="10dp"
             android:layout_width="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/rajdhani_light"
             android:onClick="add_donor_bloobType_onclick_method"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="O-" />
     </RadioGroup>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center"
+        android:fontFamily="@font/rajdhani_light"
         android:id="@+id/add_donor_phone"
         android:hint="Phone"
         />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="@font/rajdhani_light"
         android:hint="Blood quantity given ML"
         android:layout_margin="5dp"
         android:id="@+id/add_donor_quantity"
         />
+
+    </com.google.android.material.textfield.TextInputLayout>
     
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/other_button"
+            android:textColor="@color/blue4"
             android:text="ADD"
+            android:textStyle="bold"
+            android:fontFamily="@font/numans"
             android:id="@+id/add_donor_add_btn"
             />
 </LinearLayout>

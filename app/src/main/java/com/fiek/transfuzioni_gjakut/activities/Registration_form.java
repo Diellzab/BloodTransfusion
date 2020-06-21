@@ -50,6 +50,7 @@ public class Registration_form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
+        
 
         etFName = findViewById(R.id.first_name_id);
         etLName =  findViewById(R.id.last_name_id);
@@ -57,7 +58,7 @@ public class Registration_form extends AppCompatActivity {
         etPassword =  findViewById(R.id.password_id);
         etTelephone =  findViewById(R.id.phone_number_id);
         etAddress =  findViewById(R.id.address_id);
-        btnRegister =  findViewById(R.id.buttonSave);
+       btnRegister =  findViewById(R.id.buttonSave);
 //        cbDonor =  findViewById(R.id.checkBoxDonor);
         radioGroupMF = findViewById(R.id.genderRadioGroup);
         radioGroupBloodType = findViewById(R.id.add_donor_radioGroupRegister);

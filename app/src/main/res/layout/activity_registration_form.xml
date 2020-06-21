@@ -20,6 +20,7 @@
             android:gravity="center"
             android:layout_margin="8dp"
             android:textSize="25sp"
+            android:fontFamily="@font/amiko"
             android:textStyle="bold"
             android:textColor="@color/blue4"
 
@@ -40,11 +41,10 @@
 
 
            <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/first_name_id"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:inputType="text"
-                android:id="@+id/first_name_id"
-               />
+               android:inputType="text" />
        </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -78,6 +78,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:text="Gender"
+            android:fontFamily="@font/rajdhani_light"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:layout_marginRight="30dp"
@@ -97,6 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
+                android:fontFamily="@font/rajdhani_light"
                 android:textColor="@color/blue4"
                 android:id="@+id/Female"
                 android:checked="true"
@@ -106,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Male"
+                android:fontFamily="@font/rajdhani_light"
                 android:textColor="@color/blue4"
                 android:onClick="onRadioButtonClickedGender"
                 android:clickable="true"
@@ -212,6 +215,7 @@
             android:id="@+id/TextViewType"
             android:textColor="@color/blue4"
             android:textSize="15sp"
+            android:fontFamily="@font/rajdhani_light"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
             android:layout_marginRight="30dp"
@@ -236,6 +240,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:checked="true"
+                android:fontFamily="@font/rajdhani_light"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:text="A+"
                 android:textSize="10dp"
@@ -246,6 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/rajdhani_light"
                 android:clickable="true"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:textSize="10dp"
@@ -256,6 +262,7 @@
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rajdhani_light"
                 android:clickable="true"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_weight="1"
@@ -265,6 +272,7 @@
                 android:id="@+id/Bnegativ"
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/rajdhani_light"
                 android:clickable="true"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_height="wrap_content"
@@ -276,6 +284,7 @@
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
                 android:clickable="true"
+                android:fontFamily="@font/rajdhani_light"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -286,6 +295,7 @@
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
                 android:clickable="true"
+                android:fontFamily="@font/rajdhani_light"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -296,6 +306,7 @@
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
                 android:clickable="true"
+                android:fontFamily="@font/rajdhani_light"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -305,6 +316,7 @@
                 android:id="@+id/Onegativ"
                 android:textSize="10dp"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/rajdhani_light"
                 android:clickable="true"
                 android:onClick="add_donor_bloobType_onclick_methodRegister"
                 android:layout_weight="1"
@@ -321,6 +333,7 @@
             android:text="Register"
             android:id="@+id/buttonSave"
             android:textSize="20sp"
+            android:fontFamily="@font/numans"
             android:textStyle="bold"
             android:background="@drawable/other_button"
             android:textColor="@color/blue4"/>
@@ -331,6 +344,7 @@
             android:layout_height="wrap_content"
             android:text="Already have a Donor account"
             android:layout_margin="8sp"
+            android:fontFamily="@font/rajdhani_light"
             android:gravity="center"
             android:textSize="17sp"
 
@@ -343,6 +357,7 @@
             android:gravity="center"
             android:layout_margin="5sp"
             android:textSize="25sp"
+            android:fontFamily="@font/rajdhani_light"
             android:clickable="true"
             android:onClick="sign_in_method_register_form"
             android:textColor="@color/blue3"/>
