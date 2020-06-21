@@ -18,11 +18,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class Admin_login extends AppCompatActivity {
 
-    EditText etEmail, etPassword;
+    TextInputLayout etEmail, etPassword;
     Button btnLogin, coronaVirus;
     TextView tvRegister, coronaVirusCases;
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passwordError;
+    DatabaseHelper databaseHelper;
 
 
 
@@ -32,8 +33,8 @@ public class Admin_login extends AppCompatActivity {
         setContentView(R.layout.activity_admin_login);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        etEmail = (EditText) findViewById(R.id.email);
-        etPassword = (EditText) findViewById(R.id.password);
+        etEmail =  findViewById(R.id.email);
+        etPassword =  findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         tvRegister = (TextView) findViewById(R.id.tvRegister);
 //        emailError = (TextInputLayout) findViewById(R.id.emailErr);
@@ -63,7 +64,20 @@ public class Admin_login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SetValidation();
+
+                String emailValue = etEmail.getEditText().toString();
+                String passwordValue = etPassword.getEditText().toString();
+                if(databaseHelper.isLoginValid(emailValue, passwordValue)){
+                    Intent intent = new Intent(Admin_login.this, Dashboard.class);
+                    startActivity(intent);
+                    Toast.makeText(Admin_login.this, "Login success", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(Admin_login.this, "Invalid email or  password", Toast.LENGTH_SHORT).show();
+                }
+
+
+
 
             }
         });
@@ -78,36 +92,36 @@ public class Admin_login extends AppCompatActivity {
         });
     }
 
-    public  void SetValidation() {
-        if(etEmail.getText().toString().isEmpty()){
-            emailError.setError(getResources().getString(R.string.email_error));
-            isEmailValid = false;
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
-            emailError.setError(getResources().getString(R.string.error_invalid_email));
-            isEmailValid = false;
-        } else {
-                isEmailValid = true;
-                emailError.setErrorEnabled(false);
-            }
-
-        if (etPassword.getText().toString().isEmpty()){
-            passwordError.setError(getResources().getString(R.string.password_error));
-            isPasswordValid = false;
-
-        } else if (etPassword.getText().length() < 6) {
-            passwordError.setError(getResources().getString(R.string.error_invalid_email));
-            isPasswordValid = false;
-        } else {
-            isEmailValid = true;
-            passwordError.setErrorEnabled(false);
-        }
-
-        if (isEmailValid && isPasswordValid)
-        {
-            Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
-        }
-
-  }
+//    public  void SetValidation() {
+//        if(etEmail.getText().toString().isEmpty()){
+//            emailError.setError(getResources().getString(R.string.email_error));
+//            isEmailValid = false;
+//        } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
+//            emailError.setError(getResources().getString(R.string.error_invalid_email));
+//            isEmailValid = false;
+//        } else {
+//                isEmailValid = true;
+//                emailError.setErrorEnabled(false);
+//            }
+//
+//        if (etPassword.getText().toString().isEmpty()){
+//            passwordError.setError(getResources().getString(R.string.password_error));
+//            isPasswordValid = false;
+//
+//        } else if (etPassword.getText().length() < 6) {
+//            passwordError.setError(getResources().getString(R.string.error_invalid_email));
+//            isPasswordValid = false;
+//        } else {
+//            isEmailValid = true;
+//            passwordError.setErrorEnabled(false);
+//        }
+//
+//        if (isEmailValid && isPasswordValid)
+//        {
+//            Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
+//        }
+//
+//  }
 
 
 }

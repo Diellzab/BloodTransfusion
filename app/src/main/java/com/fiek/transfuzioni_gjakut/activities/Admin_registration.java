@@ -2,6 +2,7 @@ package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class Admin_registration extends AppCompatActivity {
 
     TextInputLayout etFullname, etUsername, etEmail, etPassword, etPhone;
     Button btnAddAdmin;
+    DatabaseHelper databaseHelper;
 
 
     @Override
@@ -30,10 +32,36 @@ public class Admin_registration extends AppCompatActivity {
         etPhone = findViewById(R.id.phone);
         btnAddAdmin = findViewById(R.id.btnAddAdmin);
 
+
+        databaseHelper = new DatabaseHelper(this);
+
         btnAddAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String nameValue = etFullname.getEditText().toString();
+                String emailValue = etEmail.getEditText().toString();
+                String usernameValue = etUsername.getEditText().toString();
+                String phoneValue = etPhone.getEditText().toString();
+                String passwordValue = etPassword.getEditText().toString();
+
                 registerAdmin(view);
+
+
+                if (emailValue.length() >1){
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put("name", nameValue);
+                    contentValues.put("email", emailValue);
+                    contentValues.put("username", usernameValue);
+                    contentValues.put("phone", phoneValue);
+                    contentValues.put("password", passwordValue);
+
+                    databaseHelper.inserUser(contentValues);
+                    Toast.makeText(Admin_registration.this, "User Registred", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(Admin_registration.this, "Enter the correct values", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -110,9 +138,7 @@ public class Admin_registration extends AppCompatActivity {
     private Boolean validatePassword() {
         String val = etPassword.getEditText().getText().toString();
         String passwordVal = "^" +
-                "(?=.*[a-zA-Z])" +      //any letter
-                "(?=.*[@#$%^&+=])" +    //at least 1 special character
-                "(?=\\S+$)" +           //no white spaces
+                //no white spaces
                 ".{4,}" +               //at least 4 characters
                 "$";
 
