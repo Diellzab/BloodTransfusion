@@ -29,7 +29,7 @@ public class DonorsList extends ArrayAdapter<addDonorDataInsert> {
 
         View listViewItem =inflater.inflate(R.layout.list_items_for_donnors,null,true);
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.list_blood_donator_name);
-        TextView textViewSurname = (TextView) listViewItem.findViewById(R.id.list_blood_donator_surname);
+//        TextView textViewSurname = (TextView) listViewItem.findViewById(R.id.list_blood_donator_surname);
         TextView textViewEmail = (TextView) listViewItem.findViewById(R.id.list_blood_donator_email);
         TextView textViewPhone = (TextView) listViewItem.findViewById(R.id.list_blood_donator_phone);
         TextView textViewBloodType = (TextView) listViewItem.findViewById(R.id.list_blood_donator_bloodType);
@@ -37,12 +37,12 @@ public class DonorsList extends ArrayAdapter<addDonorDataInsert> {
 
         addDonorDataInsert donors = donorList.get(position);
 
-        textViewName.setText(donors.getEmri());
-        textViewSurname.setText(donors.getMbiemri());
-        textViewBloodType.setText(donors.getTipiGjakut());
-        textViewEmail.setText(donors.getEmail());
-        textViewPhone.setText(donors.getTelefoni());
-//        textViewQuantity.setText(donors.getSasia());
+        textViewName.setText("Full Name : " + donors.getEmri() + " " + donors.getMbiemri());
+//        textViewSurname.setText();
+        textViewBloodType.setText("Blood Type : " + donors.getTipiGjakut());
+        textViewEmail.setText("Email : "+donors.getEmail());
+        textViewPhone.setText("Phone : "+donors.getTelefoni());
+        textViewQuantity.setText("Quantity : "+donors.getSasia().toString());
 
         return listViewItem;
 
