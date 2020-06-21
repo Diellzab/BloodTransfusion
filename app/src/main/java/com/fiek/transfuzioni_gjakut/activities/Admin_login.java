@@ -61,6 +61,7 @@ public class Admin_login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SetValidation();
 
             }
         });

@@ -129,9 +129,6 @@ public class Login_form  extends AppCompatActivity {
                     Intent intent = new Intent(Login_form.this, Dashboard.class);
                     startActivity(intent);
 
-                    SetValidation();
-
-
 
                 }
                 else{
