@@ -42,7 +42,7 @@ public class DonorsList extends ArrayAdapter<addDonorDataInsert> {
         textViewBloodType.setText("Blood Type : " + donors.getTipiGjakut());
         textViewEmail.setText("Email : "+donors.getEmail());
         textViewPhone.setText("Phone : "+donors.getTelefoni());
-        textViewQuantity.setText("Quantity : "+donors.getSasia().toString());
+        textViewQuantity.setText("Quantity : "+donors.getSasia().toString() + " ml");
 
         return listViewItem;
 
