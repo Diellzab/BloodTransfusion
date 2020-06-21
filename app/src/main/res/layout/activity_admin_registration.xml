@@ -122,6 +122,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnAddAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/other_button"

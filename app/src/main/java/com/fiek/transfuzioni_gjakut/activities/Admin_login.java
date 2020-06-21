@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,13 +30,14 @@ public class Admin_login extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
+        etEmail = (EditText) findViewById(R.id.email);
+        etPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         tvRegister = (TextView) findViewById(R.id.tvRegister);
-        emailError = (TextInputLayout) findViewById(R.id.emailErr);
-        passwordError = (TextInputLayout) findViewById(R.id.errPassword);
+//        emailError = (TextInputLayout) findViewById(R.id.emailErr);
+//        passwordError = (TextInputLayout) findViewById(R.id.errPassword);
         coronaVirus = (Button) findViewById(R.id.button_covid19);
 //        coronaVirusCases = (TextView) findViewById(R.id.covid_cases_text);
 
