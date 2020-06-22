@@ -1,136 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".activities.Admin_registration"
     android:orientation="vertical"
     android:background="@drawable/background_layout"
-    tools:context="com.fiek.transfuzioni_gjakut.activities.Admin_registration">
-
+    android:padding="16dp">
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register an Admin"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/blue4"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add a new Admin"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        android:fontFamily="@font/rajdhani_semibold"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="50dp"
-        />
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/blue4"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:text="First Name"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/etName"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"></EditText>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/blue4"
+        android:layout_marginLeft="20dp"
+        android:text="Last Name"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/etSurname"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"></EditText>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/blue4"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:text="Address"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/etAddress"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"></EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/blue4"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Email"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/etMail"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"></EditText>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-               />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/blue4"
+        android:layout_marginLeft="20dp"
+        android:text="Username"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/etUsername"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="text"
+        android:imeOptions="actionNext"></EditText>
 
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            app:counterEnabled="true"
-            app:counterMaxLength="15"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone number"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/blue4"
+        android:layout_marginLeft="20dp"
+        android:text="Password"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:id="@+id/etPassword"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"></EditText>
 
     <Button
-        android:id="@+id/btnAddAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/other_button"
-        android:text="Add a new admin"
-        android:fontFamily="@font/rajdhani_semibold"
+        android:text="Register"
         android:textSize="22sp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"/>
-
+        android:fontFamily="@font/rajdhani_semibold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="right"
+        android:background="@drawable/other_button"
+        android:textColor="@color/blue4"
+        android:id="@+id/btnRegister"></Button>
 
 </LinearLayout>

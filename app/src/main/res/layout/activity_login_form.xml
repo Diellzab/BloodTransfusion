@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:hint="@string/email"
+                        android:hint="Email"
                         android:fontFamily="@font/rajdhani_light"
                         android:maxLines="1"
                         android:singleLine="true"

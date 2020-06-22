@@ -3,6 +3,11 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
 
+    <string name="loguar_sukses">Login Successfully</string>
+    <string name="positive_button">Yes</string>
+    <string name="negative_button">No</string>
+    <string name="kredencialet_gabuara">Wrong credentials</string>
+
 
     <string name="navigation_drawer_closer">Close navigation drawer</string>
     <string name="prompt_email">Email</string>

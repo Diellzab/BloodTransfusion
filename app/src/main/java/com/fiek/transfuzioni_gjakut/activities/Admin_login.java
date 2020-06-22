@@ -1,127 +1,134 @@
 package com.fiek.transfuzioni_gjakut.activities;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Patterns;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
 import com.fiek.transfuzioni_gjakut.R;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class Admin_login extends AppCompatActivity {
 
-    TextInputLayout etEmail, etPassword;
-    Button btnLogin, coronaVirus;
-    TextView tvRegister, coronaVirusCases;
-    boolean isEmailValid, isPasswordValid;
-    TextInputLayout emailError, passwordError;
-    DatabaseHelper databaseHelper;
-
-
-
+    EditText etUsername, etPassword;
+    Button btnLogin, btnRegister;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        etEmail =  findViewById(R.id.email);
-        etPassword =  findViewById(R.id.password);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-        tvRegister = (TextView) findViewById(R.id.tvRegister);
-//        emailError = (TextInputLayout) findViewById(R.id.emailErr);
-//        passwordError = (TextInputLayout) findViewById(R.id.errPassword);
-        coronaVirus = (Button) findViewById(R.id.button_covid19);
-//        coronaVirusCases = (TextView) findViewById(R.id.covid_cases_text);
-
-
-
-        coronaVirus.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                /*
-                 * Intent is just like glue which helps to navigate one activity
-                 * to another.
-                 */Intent intent = new Intent(Admin_login.this,
-                        Coronavirus_Cases.class);
-                startActivity(intent); // startActivity allow you to move
-            }
-        });
-
-
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword);
+        btnLogin = findViewById(R.id.btnLogin1);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                CheckUsername(etUsername.getText().toString(),etPassword.getText().toString());
+                /*if(etUsername.getText().toString().equals("admin") &&
+                etPassword.getText().toString().equals("admin"))
+                {
+                    Toast.makeText(Main2Activity.this,getString(R.string.loguar_sukses),
+                            Toast.LENGTH_LONG).show();
 
-                String emailValue = etEmail.getEditText().toString();
-                String passwordValue = etPassword.getEditText().toString();
-                if(databaseHelper.isLoginValid(emailValue, passwordValue)){
-                    Intent intent = new Intent(Admin_login.this, Dashboard.class);
-                    startActivity(intent);
-                    Toast.makeText(Admin_login.this, "Login success", Toast.LENGTH_SHORT).show();
+
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(Main2Activity.this);
+
+                    LayoutInflater layoutInflater = getLayoutInflater();
+                    alertDialog.setView(layoutInflater.inflate(R.layout.custom_dialog_layout,null));
+                    alertDialog.setPositiveButton(R.string.positive_button, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent main3Activity = new Intent(Main2Activity.this,Main3Activity.class);
+                            main3Activity.putExtra("username",etUsername.getText().toString());
+                            startActivity(main3Activity);
+                        }
+                    });
+                    alertDialog.setNegativeButton(R.string.negative_button, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    alertDialog.show();
+
+
                 }
-                else {
-                    Toast.makeText(Admin_login.this, "Invalid email or  password", Toast.LENGTH_SHORT).show();
-                }
-
-
-
-
+                else
+                {
+                    etPassword.setError(getString(R.string.kredencialet_gabim));
+                    etPassword.requestFocus();
+                }*/
             }
         });
 
 
-        tvRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Registration_form.class);
-                startActivity(intent);
-            }
-        });
     }
 
-//    public  void SetValidation() {
-//        if(etEmail.getText().toString().isEmpty()){
-//            emailError.setError(getResources().getString(R.string.email_error));
-//            isEmailValid = false;
-//        } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
-//            emailError.setError(getResources().getString(R.string.error_invalid_email));
-//            isEmailValid = false;
-//        } else {
-//                isEmailValid = true;
-//                emailError.setErrorEnabled(false);
-//            }
-//
-//        if (etPassword.getText().toString().isEmpty()){
-//            passwordError.setError(getResources().getString(R.string.password_error));
-//            isPasswordValid = false;
-//
-//        } else if (etPassword.getText().length() < 6) {
-//            passwordError.setError(getResources().getString(R.string.error_invalid_email));
-//            isPasswordValid = false;
-//        } else {
-//            isEmailValid = true;
-//            passwordError.setErrorEnabled(false);
-//        }
-//
-//        if (isEmailValid && isPasswordValid)
-//        {
-//            Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
-//        }
-//
-//  }
+    public void CheckUsername(String username, String password)
+    {
+        SQLiteDatabase objDb = new DatabaseHelper(Admin_login.this).getReadableDatabase();
+
+        Cursor c = objDb.query(DatabaseHelper.PerdoruesitTable,
+                new String[]{User.ID,User.Emri, User.Mbiemri, User.Username,User.Password},
+                User.Username+"=?",new String[]{username},"","","");
+        /*Cursor c = objDb.rawQuery("select * from "+ Databaza.PerdoruesitTable+" where "+
+                Perdoruesi.Username+" =?",new String[]{username});*/
+        if(c.getCount()==1)
+        {
+            c.moveToFirst();
+            String dbUsername = c.getString(3);
+            String dbPassword = c.getString(4);
+
+            if(username.equals(dbUsername) &&
+                    password.equals(dbPassword))
+            {
+                Toast.makeText(Admin_login.this,getString(R.string.loguar_sukses),
+                        Toast.LENGTH_LONG).show();
 
 
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Admin_login.this);
+
+                LayoutInflater layoutInflater = getLayoutInflater();
+                alertDialog.setView(layoutInflater.inflate(R.layout.custom_dialog_layout,null));
+                alertDialog.setPositiveButton(R.string.positive_button, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent main3Activity = new Intent(Admin_login.this,Dashboard.class);
+                        main3Activity.putExtra("username",etUsername.getText().toString());
+                        startActivity(main3Activity);
+                    }
+                });
+                alertDialog.setNegativeButton(R.string.negative_button, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                alertDialog.show();
+
+
+            }
+            else
+            {
+                etPassword.setError(getString(R.string.kredencialet_gabuara));
+                etPassword.requestFocus();
+            }
+        }
+        else
+        {
+            etPassword.setError(getString(R.string.kredencialet_gabuara));
+            etPassword.requestFocus();
+        }
+    }
 }

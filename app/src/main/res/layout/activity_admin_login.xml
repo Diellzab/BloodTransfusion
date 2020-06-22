@@ -4,120 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_layout"
-    android:gravity="center"
+    tools:context=".activities.Admin_login"
+    android:gravity="center_vertical"
     android:padding="16dp"
-    tools:context="com.fiek.transfuzioni_gjakut.forms.LoginForm">
+    android:background="@drawable/background_layout">
 
-
-
-
-    <RelativeLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:id="@+id/tvadmin"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:textColor="@color/blue4"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+        android:text="Login as Admin"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:text="Username"
+        android:textColor="@color/blue4"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvadmin"
+        android:id="@+id/tvUsername"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/tvUsername"
+        android:id="@+id/etUsername"
+        android:inputType="text"
+        android:imeOptions="actionNext"></EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_below="@id/etUsername"
+        android:text="Passowrd"
+        android:id="@+id/tvPassword"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/tvPassword"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        android:id="@+id/etPassword"></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="28sp"
+        android:textColor="@color/blue4"
+        android:layout_below="@id/etPassword"
+        android:text="Login"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:background="@drawable/other_button"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnLogin1">
 
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue4"
-            android:layout_margin="6dp"
-            android:padding="10dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="4dp">
-
-
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-                android:gravity="center">
-                
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="20dp"
-                    android:text="COVID-19"
-                    android:textColor="@color/white"
-                    android:background="@drawable/virus_covid_button"
-                    android:id="@+id/button_covid19"/>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:layout_marginTop="5dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:inputType="textEmailAddress"/>
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/password"
-                    android:hint="Passowrd"
-                    app:passwordToggleEnabled="true"
-                    android:layout_marginTop="5dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:paddingStart="5dp"
-
-                        android:inputType="textPassword"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Button
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
-                    android:background="@drawable/other_button"
-                    android:fontFamily="@font/numans"
-                    android:text="Login"
-                    android:textStyle="bold"
-                    android:textColor="@color/blue4"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/tvRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:fontFamily="@font/rajdhani_semibold"
-                    android:text="@string/click_here_for_register"
-                    android:textColor="@color/blue4"
-                    android:textSize="16sp"
-/>
-
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-
-    </RelativeLayout>
-
-
+    </Button>
 
 
 </RelativeLayout>
