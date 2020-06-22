@@ -15,10 +15,20 @@ import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.fiek.transfuzioni_gjakut.forms.AddDepozitaClass;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.firebase.client.Firebase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ShtoDhurues extends AppCompatActivity {
     RadioGroup radioGroup;
@@ -33,10 +43,17 @@ public class ShtoDhurues extends AppCompatActivity {
     addDonorDataInsert shtoDhurues;
 
     AwesomeValidation awesomeValidation;
+
+//QETA e ke shtu per ME BA UPDATE
+    Firebase mRef;
+    Firebase mRefSasia;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shto_dhurues);
+
+        Firebase.setAndroidContext(this);
 
         radioGroup = findViewById(R.id.add_donor_radioGroup);
         Button buttonAdd = findViewById(R.id.add_donor_add_btn);
@@ -60,24 +77,25 @@ public class ShtoDhurues extends AppCompatActivity {
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
 
-                TextView add_donor_title = (TextView) findViewById(R.id.add_donor_title);
+                final TextView add_donor_title = (TextView) findViewById(R.id.add_donor_title);
                 EditText add_donor_name = (EditText) findViewById(R.id.add_donor_name);
                 EditText add_donor_surname = (EditText) findViewById(R.id.add_donor_surname);
                 EditText add_donor_email = (EditText) findViewById(R.id.add_donor_email);
                 EditText add_donor_phone = (EditText) findViewById(R.id.add_donor_phone);
-                EditText add_donor_quantity = (EditText) findViewById(R.id.add_donor_quantity);
+                final EditText add_donor_quantity = (EditText) findViewById(R.id.add_donor_quantity);
 
 
                 if (awesomeValidation.validate()) {
                     //Qeto posht duhet mi rujt ne databaz
+                    String bloooood = radioButton.getText().toString();
                     String blodTypeChecked = radioButton.getText().toString().trim(); // GRUPI GJAKUT
                     String email = add_donor_email.getText().toString().trim(); //IMELLA
                     String name = add_donor_name.getText().toString().trim(); //EMRI
                     String surname = add_donor_surname.getText().toString().trim(); //MBIEMRI
                     String telefoni = add_donor_phone.getText().toString().trim(); //TELEFONI
-                    int sasia = Integer.parseInt(add_donor_quantity.getText().toString().trim()); //SASIA
+                    final int sasia = Integer.parseInt(add_donor_quantity.getText().toString().trim()); //SASIA
 
-                    add_donor_title.setText(radioButton.getText().toString().trim());
+//                    add_donor_title.setText(radioButton.getText().toString().trim());
                     shtoDhurues = new addDonorDataInsert();
                     shtoNeDepozit = new AddDepozitaClass();
 
@@ -92,8 +110,59 @@ public class ShtoDhurues extends AppCompatActivity {
                     shtoNeDepozit.setSasiaGjakut(sasia);
 
                     reff.push().setValue(shtoDhurues);
-                    reffDepozita.push().setValue(shtoNeDepozit);
+//                    reffDepozita.push().setValue(shtoNeDepozit);
+////////////////////////////////////////////////////////////////////////////
+//Krej qeto posht ki mi ba nese asht per A-
+                    if(bloooood.equals("A-")) {
+                    mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMPvCdCjnbb2k70RrV");
+                    mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMPvCdCjnbb2k70RrV/sasiaGjakut");
 
+                    mRefSasia.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                            int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()) / 2;
+
+                            int sasiaTotale = value +  insertedDatas;
+                            Map<String, Object> map = new HashMap<>();
+                            map.put("sasiaGjakut", sasiaTotale );
+                            mRef.updateChildren(map);
+
+
+                            mRefSasia.removeEventListener(this);
+                            mRef.removeEventListener(this);
+                        }
+
+                        @Override
+                        public void onCancelled(FirebaseError firebaseError) {
+                            mRefSasia.removeEventListener(this);
+                        }
+                    });
+                }
+
+//                    else if (bloooood.equals("A-")) {
+//
+//                    }
+
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+//                    QETO I KE SHTU PER UPDATE
+//                    mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MA0ridS6CVbzGRxWyoX/sasiaGjakut");
+//
+//                    mRef.addValueEventListener(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(DataSnapshot dataSnapshot) {
+//                            String value = dataSnapshot.getValue(String.class);
+//                            add_donor_title.setText(value);
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(FirebaseError firebaseError) {
+//
+//                        }
+//                    });
 //                Toast.makeText(this, "Selected Blood Type: " + name,
 //                        Toast.LENGTH_SHORT).show();
                 }
