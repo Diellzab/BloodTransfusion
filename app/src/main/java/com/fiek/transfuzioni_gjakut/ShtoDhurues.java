@@ -141,10 +141,202 @@ public class ShtoDhurues extends AppCompatActivity {
                     });
                 }
 
-//                    else if (bloooood.equals("A-")) {
-//
-//                    }
 
+                    if(bloooood.equals("B+")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MA0ridS6CVbzGRxWyoX");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MA0ridS6CVbzGRxWyoX/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("B-")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMs7S6lvc6jLiPjopw");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMs7S6lvc6jLiPjopw/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("A+")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMsQ_kRiGH00nYLk38");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMsQ_kRiGH00nYLk38/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("AB+")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMszfLOojG4978vyNk");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMszfLOojG4978vyNk/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("AB-")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAN0wLbz3rvdPHUw8j-");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAN0wLbz3rvdPHUw8j-/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("O+")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAN0wjIjQg0Z-yOvMr7");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAN0wjIjQg0Z-yOvMr7/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
+
+                    if(bloooood.equals("O-")) {
+                        mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MARJBC91yvKCOKpdoHq");
+                        mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MARJBC91yvKCOKpdoHq/sasiaGjakut");
+
+                        mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                int value = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
+
+                                int sasiaTotale = value +  insertedDatas;
+                                Map<String, Object> map = new HashMap<>();
+                                map.put("sasiaGjakut", sasiaTotale );
+                                mRef.updateChildren(map);
+
+
+                                mRefSasia.removeEventListener(this);
+                                mRef.removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+                                mRefSasia.removeEventListener(this);
+                            }
+                        });
+                    }
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
