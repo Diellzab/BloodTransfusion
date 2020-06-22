@@ -117,11 +117,12 @@ public class ShtoDhurues extends AppCompatActivity {
                     mRef = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMPvCdCjnbb2k70RrV");
                     mRefSasia = new Firebase("https://transufzionigjakut.firebaseio.com/DepozitaPlus/-MAMPvCdCjnbb2k70RrV/sasiaGjakut");
 
-                    mRefSasia.addValueEventListener(new ValueEventListener() {
+                    mRefSasia.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
+
                             int value = Integer.parseInt(dataSnapshot.getValue(String.class));
-                            int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()) / 2;
+                            int insertedDatas = Integer.parseInt(add_donor_quantity.getText().toString()); //qeta pe merr dyfish
 
                             int sasiaTotale = value +  insertedDatas;
                             Map<String, Object> map = new HashMap<>();
