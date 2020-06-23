@@ -97,7 +97,9 @@
                     android:text="Login"
                     android:textStyle="bold"
                     android:textColor="@color/blue4"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+
+                    />
 
                 <TextView
                     android:id="@+id/tvRegister"

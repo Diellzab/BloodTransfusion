@@ -10,12 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.regex.Pattern;
@@ -66,7 +73,28 @@ public class Login_form  extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String userEnteredEmail = etEmail.getText().toString().trim();
+                final String userEnteredPassword = etPassword.getText().toString().trim();
 
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
+                Query chechUser = reference.orderByChild("email").equalTo(userEnteredPassword);
+
+                chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            String passwordFromDb = dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
+                            if(passwordFromDb.equals(userEnteredPassword)){
+                                tvRegister.setText("OKAAAYYY JE LLOGU");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 
@@ -111,5 +139,8 @@ public class Login_form  extends AppCompatActivity {
 
   }
 
+    public void isUser() {
+
+    }
 
 }

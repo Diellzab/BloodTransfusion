@@ -43,9 +43,9 @@
         <item>0+</item>
         <item>0-</item>
     </string-array>
-    
-    
-        <!--    Categories-->
+
+
+    <!--    Categories-->
     <string name="recipient">Request Blood</string>
     <string name="donor">Donate Blood</string>
     <string name="request">Current Blood Request</string>
@@ -53,8 +53,8 @@
     <string name="active">Active Donors</string>
     <string name="accepted">Accepted Request</string>
     <string name="history">My Donate History</string>
+    <string name="invalid_Password">Invalid Password</string>
+    <string name="invalidEmail">Invalid Email</string>
 
-    
-    
-    
+
 </resources>
