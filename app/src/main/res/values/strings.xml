@@ -3,6 +3,11 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
 
+    <string name="loguar_sukses">Login Successfully</string>
+    <string name="positive_button">Yes</string>
+    <string name="negative_button">No</string>
+    <string name="kredencialet_gabuara">Wrong credentials</string>
+
 
     <string name="navigation_drawer_closer">Close navigation drawer</string>
     <string name="prompt_email">Email</string>
@@ -33,6 +38,21 @@
     <string name="err_tel">Invalid phone number</string>
     <string name="invalid_adress">Invalid adress</string>
     <string name="err_password">Invalid password</string>
+    <string name="recipient">Request Blood</string>
+
+
+    <!--    Categories-->
+    <string name="donor">Donate Blood</string>
+    <string name="request">Current Blood Request</string>
+    <string name="saverequest">Save Blood Request</string>
+    <string name="active">Active Donors</string>
+    <string name="accepted">Accepted Request</string>
+    <string name="history">My Donate History</string>
+    <string name="checkbox">com.fiek.transfuzioni_gjakut.checkbox</string>
+
+
+    <string name="username">com.fiek.transfuzioni_gjakut.username</string>
+    <string name="password">com.fiek.transfuzioni_gjakut.password</string>
     <string-array name="type">
         <item>A+</item>
         <item>A-</item>
@@ -43,6 +63,7 @@
         <item>0+</item>
         <item>0-</item>
     </string-array>
+<<<<<<< HEAD
 
 
     <!--    Categories-->
@@ -57,4 +78,8 @@
     <string name="invalidEmail">Invalid Email</string>
 
 
+=======
+
+
+>>>>>>> 07e3624e9ce011a4bcab9e946d3467f1f9dff06a
 </resources>

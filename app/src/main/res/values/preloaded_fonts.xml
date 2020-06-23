@@ -5,5 +5,7 @@
         <item>@font/baloo</item>
         <item>@font/numans</item>
         <item>@font/rajdhani_light</item>
+        <item>@font/rajdhani_medium</item>
+        <item>@font/rajdhani_semibold</item>
     </array>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Admin_login"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_layout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvadmin"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:textColor="@color/blue4"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+        android:text="Login as Admin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:text="Username"
+        android:textColor="@color/blue4"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvadmin"
+        android:id="@+id/tvUsername"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/tvUsername"
+        android:id="@+id/etUsername"
+        android:inputType="text"
+        android:imeOptions="actionNext"></EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rajdhani_medium"
+        android:layout_below="@id/etUsername"
+        android:text="Passowrd"
+        android:id="@+id/tvPassword"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/tvPassword"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        android:id="@+id/etPassword"></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="28sp"
+        android:textColor="@color/blue4"
+        android:layout_below="@id/etPassword"
+        android:text="Login"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:background="@drawable/other_button"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnLogin1">
+
+    </Button>
+
+
+</RelativeLayout>
