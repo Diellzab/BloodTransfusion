@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_Register"
+            android:icon="@mipmap/register_round"
+            android:title="Register"/>
+        <item
+            android:id="@+id/nav_donor"
+            android:icon="@mipmap/donors_round"
+            android:title="Donor"
+            />
+
+        <item
+            android:id="@+id/nav_recipient"
+            app:showAsAction="always"
+            android:icon="@mipmap/marress_round"
+            android:title="Recipient"/>
+
+        <item
+            android:id="@+id/nav_depoist"
+            android:icon="@mipmap/bloodd_round"
+            android:title="Depoist" />
+
+
+    </group>
+
+
+</menu>
