@@ -1,54 +1,49 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.fiek.transfuzioni_gjakut.Donoooooors;
+import com.fiek.transfuzioni_gjakut.DonorsList;
+import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.addDonorDataInsert;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.firebase.ui.firestore.paging.FirestoreDataSource;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Donoooooors extends AppCompatActivity {
-
+public class DepozitaEgjakut extends AppCompatActivity {
     FirebaseFirestore mFirebaseFirestore = FirebaseFirestore.getInstance();
     CollectionReference shtoDhuruesRef = mFirebaseFirestore.collection("ShtoDhurues");
     DatabaseReference databaseArticles ;
     RecyclerView recyclerView;
-    FirestoreRecyclerOptions<addDonorDataInsert> options;
+    FirestoreRecyclerOptions<DepozitaEgjakutClass> options;
     FirestoreRecyclerAdapter adapter;
     TextView textViewData;
     ListView listViewDonors;
-    List<addDonorDataInsert> donorsList;
-
+    List<DepozitaEgjakutClass> depozitaList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donoooooors);
-        listViewDonors = (ListView) findViewById(R.id.listViewDonors);
+        setContentView(R.layout.activity_depozita_egjakut);
 
-        databaseArticles = FirebaseDatabase.getInstance().getReference("ShtoDhurues");
-        donorsList = new ArrayList<>();
+        listViewDonors = (ListView) findViewById(R.id.listViewDepozita);
+
+        databaseArticles = FirebaseDatabase.getInstance().getReference("DepozitaPlus");
+        depozitaList = new ArrayList<>();
 
     }
 
@@ -59,13 +54,13 @@ public class Donoooooors extends AppCompatActivity {
         databaseArticles.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                donorsList.clear();
+                depozitaList.clear();
                 for (DataSnapshot artistSnapshot1: dataSnapshot.getChildren()) {
-                    addDonorDataInsert artist = artistSnapshot1.getValue(addDonorDataInsert.class);
-                    donorsList.add(artist);
+                    DepozitaEgjakutClass artist = artistSnapshot1.getValue(DepozitaEgjakutClass.class);
+                    depozitaList.add(artist);
                 }
 
-                DonorsList adapter = new DonorsList(Donoooooors.this, donorsList);
+                DepozitaList adapter = new DepozitaList(DepozitaEgjakut.this, depozitaList);
                 listViewDonors.setAdapter(adapter);
             }
 
@@ -75,5 +70,4 @@ public class Donoooooors extends AppCompatActivity {
             }
         });
     }
-
 }

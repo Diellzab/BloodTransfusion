@@ -120,6 +120,30 @@ public class Login_form  extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
+                final String userEnteredEmail = etEmail.getText().toString().trim();
+                final String userEnteredPassword = etPassword.getText().toString().trim();
+
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
+                Query chechUser = reference.orderByChild("email").equalTo(userEnteredPassword);
+
+                chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            String passwordFromDb = dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
+                            if(passwordFromDb.equals(userEnteredPassword)){
+                                tvRegister.setText("OKAAAYYY JE LLOGU");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+=======
 
                 if (rememberMe.isChecked()){
 
@@ -165,6 +189,7 @@ public class Login_form  extends AppCompatActivity {
 
                 }
 
+>>>>>>> 07e3624e9ce011a4bcab9e946d3467f1f9dff06a
             }
         });
 
@@ -284,6 +309,9 @@ public class Login_form  extends AppCompatActivity {
 
   }
 
+    public void isUser() {
+
+    }
 
 
 

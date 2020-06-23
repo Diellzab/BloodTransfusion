@@ -1,5 +1,6 @@
 package com.fiek.transfuzioni_gjakut.forms;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,12 @@ import com.fiek.transfuzioni_gjakut.activities.Login_form;
 import com.fiek.transfuzioni_gjakut.activities.Registration_form;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginForm extends AppCompatActivity {
     EditText etEmail, etPassword;
@@ -62,6 +69,8 @@ public class LoginForm extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tvRegister.setText("mir esht");
+
                 SetValidation();
 
 
@@ -108,4 +117,29 @@ public class LoginForm extends AppCompatActivity {
         }
 
     }
+
+//    public void isUser(View v) {
+//        final String userEnteredEmail = etEmail.getText().toString().trim();
+//        final String userEnteredPassword = etPassword.getText().toString().trim();
+//
+//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
+//        Query chechUser = reference.orderByChild("email").equalTo(userEnteredPassword);
+//
+//        chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                if(dataSnapshot.exists()){
+//                    String passwordFromDb = dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
+//                    if(passwordFromDb.equals(userEnteredPassword)){
+//                        tvRegister.setText("OKAAAYYY JE LLOGU");
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+//    }
 }
