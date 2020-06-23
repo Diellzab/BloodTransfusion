@@ -5,16 +5,25 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Home"
+            android:icon="@mipmap/register_round"
+            android:title="Home"/>
 
         <item
-            android:id="@+id/nav_Register"
+            android:id="@+id/nav_Register_donor"
             android:icon="@mipmap/register_round"
-            android:title="Register"/>
+            android:title="Register a Donor"/>
         <item
             android:id="@+id/nav_donor"
             android:icon="@mipmap/donors_round"
-            android:title="Donor"
+            android:title="List of Donor"
             />
+
+        <item
+            android:id="@+id/nav_register_recipient"
+            android:icon="@mipmap/register_round"
+            android:title="Register a Recipient"/>
 
         <item
             android:id="@+id/nav_recipient"
@@ -26,6 +35,17 @@
             android:id="@+id/nav_depoist"
             android:icon="@mipmap/bloodd_round"
             android:title="Depoist" />
+
+        <item
+            android:id="@+id/nav_Register_admin"
+            android:icon="@mipmap/register_round"
+            android:title="Add an Admin"/>
+
+
+        <item
+            android:id="@+id/nav_logOut"
+            android:icon="@mipmap/register_round"
+            android:title="Log Out"/>
 
 
     </group>
