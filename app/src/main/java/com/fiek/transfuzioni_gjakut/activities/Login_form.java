@@ -19,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.addDonorDataInsert;
 import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -120,76 +121,53 @@ public class Login_form  extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                final String userEnteredEmail = etEmail.getText().toString().trim();
-                final String userEnteredPassword = etPassword.getText().toString().trim();
 
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-                Query chechUser = reference.orderByChild("email").equalTo(userEnteredPassword);
+//                if (rememberMe.isChecked()){
+//
+//                    mEditor.putString(getString(R.string.checkbox), "True");
+//                    mEditor.commit();
+//
+//                    //save the name
+//                    String username = etEmail.getText().toString();
+//                    mEditor.putString(getString(R.string.username), username);
+//                    mEditor.commit();
+//
+//                    String password = etPassword.getText().toString();
+//                    mEditor.putString(getString(R.string.password), password);
+//                    mEditor.commit();
+//
+//                    Intent intent = new Intent(Login_form.this, Dashboard.class);
+//                    startActivity(intent);
+//
+//
+//                }
+//                else{
+//
+//                    mEditor.putString(getString(R.string.checkbox), "False");
+//                    mEditor.commit();
+//
+//                    //save the name
+//                    String username = etEmail.getText().toString();
+//                    mEditor.putString(getString(R.string.username), "");
+//                    mEditor.commit();
+//
+//                    String password = etPassword.getText().toString();
+//                    mEditor.putString(getString(R.string.password), "");
+//                    mEditor.commit();
+//
+//                    Intent intent = new Intent(Login_form.this, Dashboard.class);
+//                    startActivity(intent);
+//
+//                    SetValidation();
+//
+//
+//
+//
+//
+//                }
 
-                chechUser.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-                            String passwordFromDb = dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
-                            if(passwordFromDb.equals(userEnteredPassword)){
-                                tvRegister.setText("OKAAAYYY JE LLOGU");
-                            }
-                        }
-                    }
+                isUser();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-=======
-
-                if (rememberMe.isChecked()){
-
-                    mEditor.putString(getString(R.string.checkbox), "True");
-                    mEditor.commit();
-
-                    //save the name
-                    String username = etEmail.getText().toString();
-                    mEditor.putString(getString(R.string.username), username);
-                    mEditor.commit();
-
-                    String password = etPassword.getText().toString();
-                    mEditor.putString(getString(R.string.password), password);
-                    mEditor.commit();
-
-                    Intent intent = new Intent(Login_form.this, Dashboard.class);
-                    startActivity(intent);
-
-
-                }
-                else{
-
-                    mEditor.putString(getString(R.string.checkbox), "False");
-                    mEditor.commit();
-
-                    //save the name
-                    String username = etEmail.getText().toString();
-                    mEditor.putString(getString(R.string.username), "");
-                    mEditor.commit();
-
-                    String password = etPassword.getText().toString();
-                    mEditor.putString(getString(R.string.password), "");
-                    mEditor.commit();
-
-                    Intent intent = new Intent(Login_form.this, Dashboard.class);
-                    startActivity(intent);
-
-                    SetValidation();
-
-
-
-
-
-                }
-
->>>>>>> 07e3624e9ce011a4bcab9e946d3467f1f9dff06a
             }
         });
 
@@ -217,34 +195,53 @@ public class Login_form  extends AppCompatActivity {
 
                     etEmail.setError(null);
 
-                    String passwordFromDB = dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
-                    if(passwordFromDB.equals(userEnteredPassword)){
-
-                        String nameFromDB = dataSnapshot.child(userEnteredEmail).child("emri").getValue(String.class);
-                        String surnameFromDB = dataSnapshot.child(userEnteredEmail).child("mbiemri").getValue(String.class);
-                        String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
-                        String phoneFromDB = dataSnapshot.child(userEnteredEmail).child("telefoni").getValue(String.class);
-                        String bloodTypeFromDB = dataSnapshot.child(userEnteredEmail).child("tipiGjakut").getValue(String.class);
+                    for (DataSnapshot artistSnapshot1: dataSnapshot.getChildren()) {
+//                        UsersGetClass artist = artistSnapshot1.getValue(UsersGetClass.class);
 
 
+                        String passwordFromDB = artistSnapshot1.child("password").getValue(String.class);
+//                        String passwordFromDB = dataSnapshot.child().child("password").getValue(String.class);
+                        if(passwordFromDB.equals(userEnteredPassword)){
 
 
-                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
-                        intent.putExtra("emri", nameFromDB);
-                        intent.putExtra("mbiemri", surnameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("telefoni", phoneFromDB);
-                        intent.putExtra("tipiGjakut", bloodTypeFromDB);
+//////////////////%%%%%%%%%%%%%%%%%%%%%%%%%%//////////////////////////////////////
+                            tvRegister.setText("Jeni lloguar");
 
-                        startActivity(intent);
+                        }
 
-
+                        else  {
+                            tvRegister.setText("nuk ben");
+                        }
 
                     }
-                    else{
-                        etPassword.setError("Wrong Password");
-                        etPassword.requestFocus();
-                    }
+
+
+
+//                        String nameFromDB = dataSnapshot.child(userEnteredEmail).child("emri").getValue(String.class);
+//                        String surnameFromDB = dataSnapshot.child(userEnteredEmail).child("mbiemri").getValue(String.class);
+//                        String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
+//                        String phoneFromDB = dataSnapshot.child(userEnteredEmail).child("telefoni").getValue(String.class);
+//                        String bloodTypeFromDB = dataSnapshot.child(userEnteredEmail).child("tipiGjakut").getValue(String.class);
+//
+//
+//
+//
+//                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+//                        intent.putExtra("emri", nameFromDB);
+//                        intent.putExtra("mbiemri", surnameFromDB);
+//                        intent.putExtra("email", emailFromDB);
+//                        intent.putExtra("telefoni", phoneFromDB);
+//                        intent.putExtra("tipiGjakut", bloodTypeFromDB);
+//
+//                        startActivity(intent);
+
+
+
+
+//                    else{
+////                        etPassword.setError("Wrong Password");
+////                        etPassword.requestFocus();
+//                    }
                 }
 
                 else{
@@ -265,8 +262,8 @@ public class Login_form  extends AppCompatActivity {
     public void checkSharedPreferences(){
 
         String checkbox = mPreferences.getString(getString(R.string.checkbox), "false");
-        String username = mPreferences.getString(getString(R.string.username), " ");
-        String password = mPreferences.getString(getString(R.string.password), " ");
+        String username = mPreferences.getString(getString(R.string.username), "");
+        String password = mPreferences.getString(getString(R.string.password), "");
 
         etEmail.setText(username);
         etPassword.setText(password);
@@ -294,7 +291,7 @@ public class Login_form  extends AppCompatActivity {
             passwordError.setError(getResources().getString(R.string.password_error));
             isPasswordValid = false;
 
-        } else if (etPassword.getText().length() < 6) {
+        } else if (etPassword.getText().length() < 5) {
             passwordError.setError(getResources().getString(R.string.error_invalid_email));
             isPasswordValid = false;
         } else {
@@ -308,11 +305,6 @@ public class Login_form  extends AppCompatActivity {
         }
 
   }
-
-    public void isUser() {
-
-    }
-
 
 
 }
