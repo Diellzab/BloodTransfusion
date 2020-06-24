@@ -1,22 +1,23 @@
+
 package com.fiek.transfuzioni_gjakut.activities;
 
 public class DepozitaEgjakutClass {
-    private Integer sasia;
+    private Long sasiaGjakut;
     private String tipiGjakut;
 
-    public DepozitaEgjakutClass() {}
+    public DepozitaEgjakutClass(){}
 
-    public DepozitaEgjakutClass(String tipiGjakut,Integer sasia) {
+    public DepozitaEgjakutClass(Long sasiaGjakut, String tipiGjakut) {
+        this.sasiaGjakut = sasiaGjakut;
         this.tipiGjakut = tipiGjakut;
-        this.sasia = sasia;
     }
 
-    public Integer getSasia() {
-        return sasia;
+    public Long getSasiaGjakut() {
+        return sasiaGjakut;
     }
 
-    public void setSasia(Integer sasia) {
-        this.sasia = sasia;
+    public void setSasiaGjakut(Long sasiaGjakut) {
+        this.sasiaGjakut = sasiaGjakut;
     }
 
     public String getTipiGjakut() {
