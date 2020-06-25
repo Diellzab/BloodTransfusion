@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fiek.transfuzioni_gjakut.R;
@@ -16,20 +17,24 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class UserProfile extends AppCompatActivity {
-
+    TextView emriProfilit, userProfileBloodType, userProfileBloodQuantity,userProfilePhone,userProfileEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-
+        emriProfilit = findViewById(R.id.userProfileName);
+        userProfileBloodType = findViewById(R.id.userProfileBloodType);
+        userProfileBloodQuantity = findViewById(R.id.userProfileBloodQuantity);
+        userProfilePhone = findViewById(R.id.userProfilePhone);
+        userProfileEmail = findViewById(R.id.userProfileEmail);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         //Ktu shkruhet kodi per me u ndryshu te dhanat kur te hapet profili
-        String userEnteredEmailSession = getIntent().getStringExtra("emailSession");
+        final String userEnteredEmailSession = getIntent().getStringExtra("emailSession");
 
         Toast.makeText(getApplicationContext(),userEnteredEmailSession, Toast.LENGTH_LONG).show(); //onStart Called
 
@@ -54,7 +59,14 @@ public class UserProfile extends AppCompatActivity {
                         String sasiaFromDB = (artistSnapshot1.child("sasia").getValue(int.class)).toString();
 
                         Toast.makeText(getApplicationContext(),"mirsevjen "+emriFromDB, Toast.LENGTH_LONG).show(); //onStart Called
+
+                        emriProfilit.setText("Full Name : " +emriFromDB + " " + mbiemriFromDB);
+                        userProfileBloodType.setText("Blood Type : " + tipiGjakutFromDB);
+                        userProfileBloodQuantity.setText("Quantity : " + sasiaFromDB);
+                        userProfilePhone.setText("Phone : " + telefoniFromDB);
+                        userProfileEmail.setText("Email : " + userEnteredEmailSession);
                     }
+
 
                 }
 
