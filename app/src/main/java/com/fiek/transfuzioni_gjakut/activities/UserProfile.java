@@ -36,7 +36,7 @@ public class UserProfile extends AppCompatActivity {
         //Ktu shkruhet kodi per me u ndryshu te dhanat kur te hapet profili
         final String userEnteredEmailSession = getIntent().getStringExtra("emailSession");
 
-        Toast.makeText(getApplicationContext(),userEnteredEmailSession, Toast.LENGTH_LONG).show(); //onStart Called
+//        Toast.makeText(getApplicationContext(),userEnteredEmailSession, Toast.LENGTH_LONG).show(); //onStart Called
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("ShtoDhurues");
         Query checkUser = reference.orderByChild("email").equalTo(userEnteredEmailSession);
@@ -48,15 +48,18 @@ public class UserProfile extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
+                    Integer sasiaX =  0;
                     for (DataSnapshot artistSnapshot1: dataSnapshot.getChildren()) {
 //                        UsersGetClass artist = artistSnapshot1.getValue(UsersGetClass.class);
 
+                        sasiaX +=  artistSnapshot1.child("sasia").getValue(int.class);
 
                         String telefoniFromDB = artistSnapshot1.child("telefoni").getValue(String.class);
                         String emriFromDB = artistSnapshot1.child("emri").getValue(String.class);
                         String mbiemriFromDB = artistSnapshot1.child("mbiemri").getValue(String.class);
                         String tipiGjakutFromDB = artistSnapshot1.child("tipiGjakut").getValue(String.class);
-                        String sasiaFromDB = (artistSnapshot1.child("sasia").getValue(int.class)).toString();
+//                        String sasiaFromDB = (artistSnapshot1.child("sasia").getValue(int.class)).toString();
+                        String sasiaFromDB = sasiaX.toString();
 
                         Toast.makeText(getApplicationContext(),"mirsevjen "+emriFromDB, Toast.LENGTH_LONG).show(); //onStart Called
 
@@ -71,6 +74,7 @@ public class UserProfile extends AppCompatActivity {
                 }
 
                 else {
+                    emriProfilit.setText("Ju nuk keni dhuruear Gjak!");
                     Toast.makeText(getApplicationContext(),"Ju nuk keni dhuruar Gjak !", Toast.LENGTH_LONG).show(); //onStart Called
                 }
             }
