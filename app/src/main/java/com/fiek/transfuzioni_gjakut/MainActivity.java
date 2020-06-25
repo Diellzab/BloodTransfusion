@@ -2,6 +2,10 @@
 package com.fiek.transfuzioni_gjakut;
 
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,10 +13,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
-import android.os.Bundle;
-import android.view.MenuItem;
-
+import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.RecipientFragment;
+import com.fiek.transfuzioni_gjakut.activities.ActivityListaMarresve;
+import com.fiek.transfuzioni_gjakut.activities.Admin_registration;
+import com.fiek.transfuzioni_gjakut.activities.Dashboard;
+import com.fiek.transfuzioni_gjakut.activities.DepozitaEgjakut;
+import com.fiek.transfuzioni_gjakut.activities.DepozitaList;
+import com.fiek.transfuzioni_gjakut.activities.Registration_form;
+import com.fiek.transfuzioni_gjakut.activities.ShtoMarres;
+import com.fiek.transfuzioni_gjakut.activities.ShtoMarresList;
+import com.fiek.transfuzioni_gjakut.depoistFragment;
+import com.fiek.transfuzioni_gjakut.donorFragment;
+import com.fiek.transfuzioni_gjakut.registerFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -39,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (savedInstanceState==null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_Register);
+            navigationView.setCheckedItem(R.id.nav_Home);
         }
 
     }
@@ -55,32 +68,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.nav_depoist:
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new depoistFragment()).commit();
-            break;
-            case R.id.nav_donor:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new donorFragment()).commit();
-                break;
-            case R.id.nav_recipient:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecipientFragment()).commit();
-                break;
             case R.id.nav_Home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
-                break;
-            case R.id.nav_Register_admin:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
+                startActivity(new Intent(MainActivity.this, Dashboard.class));
                 break;
             case R.id.nav_Register_donor:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
+                startActivity(new Intent(MainActivity.this, ShtoDhurues.class));
                 break;
+            case R.id.nav_donor:
+                startActivity(new Intent(MainActivity.this, Donoooooors.class));
+            case R.id.nav_recipient:
+               startActivity(new Intent(MainActivity.this, ActivityListaMarresve.class));
+               break;
             case R.id.nav_register_recipient:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
+                startActivity(new Intent(MainActivity.this, ShtoMarres.class));
+            case R.id.nav_depoist:
+                startActivity(new Intent(MainActivity.this, DepozitaEgjakut.class));
+                break;
+            case R.id.nav_Register_admin:
+                startActivity(new Intent(MainActivity.this, Admin_registration.class));
                 break;
             case R.id.nav_logOut:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
+                startActivity(new Intent(MainActivity.this, ShtoMarres.class));
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

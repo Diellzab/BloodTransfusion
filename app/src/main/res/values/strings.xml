@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Blood Transfusion</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
+
 
     <string name="loguar_sukses">Login Successfully</string>
     <string name="positive_button">Yes</string>
@@ -79,4 +79,39 @@
 
 
 
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+
+<!--    Navigation Drawer menu labels-->
+    <string name="nav_Home">Home</string>
+    <string name="nav_registerDonor">Register a Donor</string>
+    <string name="nav_listDonor">List of Donor</string>
+    <string name="nav_registerRecipient">Register a Recipient</string>
+    <string name="nav_recipient">Recipient</string>
+    <string name="nav_donor">Donor</string>
+    <string name="nav_addAdmin">Add an Admin</string>
+    <string name="nav_info">Info</string>
+    <string name="nav_logOut">Log Out</string>
+
+<!--    Toolbar titles when navigation menu item is selected-->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Register a Donor</item>
+        <item>List of Donor</item>
+        <item>Register a Recipient</item>
+        <item>Recipient</item>
+        <item>Donor</item>
+        <item>Add an Admin</item>
+        <item>Info</item>
+        <item>Log Out</item>
+
+
+
+    </string-array>
+
+<!--    ddueht me kqyr prap em shtu diqka-->
 </resources>
