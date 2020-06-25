@@ -182,6 +182,7 @@ public class Login_form  extends AppCompatActivity {
     }
 
     private void isUser(){
+        final String userEnteredEmailSession = etEmail.getText().toString().trim();
         final String userEnteredEmail = etEmail.getText().toString().trim();
         final String userEnteredPassword = etPassword.getText().toString().trim();
 
@@ -206,7 +207,9 @@ public class Login_form  extends AppCompatActivity {
 
 //////////////////%%%%%%%%%%%%%%%%%%%%%%%%%%//////////////////////////////////////
                             tvRegister.setText("Jeni lloguar");
-
+                            Intent intent = new Intent(getBaseContext(), UserProfile.class);
+                            intent.putExtra("emailSession", userEnteredEmailSession);
+                            startActivity(intent);
                         }
 
                         else  {
