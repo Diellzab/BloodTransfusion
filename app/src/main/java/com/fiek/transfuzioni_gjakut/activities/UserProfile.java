@@ -1,6 +1,7 @@
 package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,8 +17,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import dmax.dialog.SpotsDialog;
+
 public class UserProfile extends AppCompatActivity {
     TextView emriProfilit, userProfileBloodType, userProfileBloodQuantity,userProfilePhone,userProfileEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +32,16 @@ public class UserProfile extends AppCompatActivity {
         userProfileBloodQuantity = findViewById(R.id.userProfileBloodQuantity);
         userProfilePhone = findViewById(R.id.userProfilePhone);
         userProfileEmail = findViewById(R.id.userProfileEmail);
+
+
+
     }
 
     @Override
     protected void onStart() {
+        final android.app.AlertDialog dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog.show();
+
         super.onStart();
         //Ktu shkruhet kodi per me u ndryshu te dhanat kur te hapet profili
         final String userEnteredEmailSession = getIntent().getStringExtra("emailSession");
@@ -47,6 +57,7 @@ public class UserProfile extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 if(dataSnapshot.exists()) {
                     Integer sasiaX =  0;
                     for (DataSnapshot artistSnapshot1: dataSnapshot.getChildren()) {
@@ -61,21 +72,24 @@ public class UserProfile extends AppCompatActivity {
 //                        String sasiaFromDB = (artistSnapshot1.child("sasia").getValue(int.class)).toString();
                         String sasiaFromDB = sasiaX.toString();
 
-                        Toast.makeText(getApplicationContext(),"mirsevjen "+emriFromDB, Toast.LENGTH_LONG).show(); //onStart Called
+                        Toast.makeText(getApplicationContext(),"Welcome "+userEnteredEmailSession, Toast.LENGTH_LONG).show(); //onStart Called
 
                         emriProfilit.setText("Full Name : " +emriFromDB + " " + mbiemriFromDB);
                         userProfileBloodType.setText("Blood Type : " + tipiGjakutFromDB);
                         userProfileBloodQuantity.setText("Quantity : " + sasiaFromDB);
                         userProfilePhone.setText("Phone : " + telefoniFromDB);
                         userProfileEmail.setText("Email : " + userEnteredEmailSession);
+
+                        dialog.dismiss();
                     }
 
 
                 }
 
                 else {
-                    emriProfilit.setText("Ju nuk keni dhuruear Gjak!");
-                    Toast.makeText(getApplicationContext(),"Ju nuk keni dhuruar Gjak !", Toast.LENGTH_LONG).show(); //onStart Called
+                    dialog.dismiss();
+                    emriProfilit.setText("You've not donated blood!");
+                    Toast.makeText(getApplicationContext(),"You have not Donated blod yet !", Toast.LENGTH_LONG).show(); //onStart Called
                 }
             }
 

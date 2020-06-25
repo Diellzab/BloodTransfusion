@@ -29,6 +29,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
+import dmax.dialog.SpotsDialog;
+
 public class Donoooooors extends AppCompatActivity {
 
     FirebaseFirestore mFirebaseFirestore = FirebaseFirestore.getInstance();
@@ -55,7 +57,8 @@ public class Donoooooors extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        final android.app.AlertDialog dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog.show();
         databaseArticles.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -67,6 +70,8 @@ public class Donoooooors extends AppCompatActivity {
 
                 DonorsList adapter = new DonorsList(Donoooooors.this, donorsList);
                 listViewDonors.setAdapter(adapter);
+
+                dialog.dismiss();
             }
 
             @Override

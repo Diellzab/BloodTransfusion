@@ -25,6 +25,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+import dmax.dialog.SpotsDialog;
+
 public class DepozitaEgjakut extends AppCompatActivity {
     FirebaseFirestore mFirebaseFirestore = FirebaseFirestore.getInstance();
     CollectionReference shtoDhuruesRef = mFirebaseFirestore.collection("ShtoDhurues");
@@ -50,7 +52,8 @@ public class DepozitaEgjakut extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        final android.app.AlertDialog dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog.show();
         databaseArticles.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -62,6 +65,7 @@ public class DepozitaEgjakut extends AppCompatActivity {
 
                 DepozitaList adapter = new DepozitaList(DepozitaEgjakut.this, depozitaList);
                 listViewDonors.setAdapter(adapter);
+                dialog.dismiss();
             }
 
             @Override

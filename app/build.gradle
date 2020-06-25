@@ -43,5 +43,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.4.3'
     implementation 'com.firebaseui:firebase-ui-firestore:4.1.0'
     implementation 'com.firebase:firebase-client-android:2.4.0'
-
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
 }
