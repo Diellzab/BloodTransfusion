@@ -25,6 +25,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+import dmax.dialog.SpotsDialog;
+
 public class ActivityListaMarresve extends AppCompatActivity {
     FirebaseFirestore mFirebaseFirestore = FirebaseFirestore.getInstance();
     CollectionReference shtoDhuruesRef = mFirebaseFirestore.collection("ShtoDhurues");
@@ -49,7 +51,8 @@ public class ActivityListaMarresve extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        final android.app.AlertDialog dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog.show();
         databaseArticles.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -61,6 +64,8 @@ public class ActivityListaMarresve extends AppCompatActivity {
 
                 DonorsList adapter = new DonorsList(ActivityListaMarresve.this, donorsList);
                 listViewDonors.setAdapter(adapter);
+
+                dialog.dismiss();
             }
 
             @Override

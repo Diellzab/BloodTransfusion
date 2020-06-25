@@ -41,7 +41,7 @@ public class DepozitaList extends ArrayAdapter<DepozitaEgjakutClass>{
 
         textViewBloodType.setText("Blood Type : " + depozita.getTipiGjakut());
 
-        textViewQuantity.setText("Quantity : "+depozita.getSasia().toString() + " ml");
+        textViewQuantity.setText("Quantity : "+depozita.getSasiaGjakut().toString() + " ml");
 
         return listViewItem;
 
