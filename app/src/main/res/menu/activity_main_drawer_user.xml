@@ -7,25 +7,25 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_Register"
+            android:id="@+id/nav_Home"
             android:icon="@mipmap/register_round"
-            android:title="Register"/>
+            android:title="Home"/>
         <item
-            android:id="@+id/nav_donor"
+            android:id="@+id/nav_Profile"
             android:icon="@mipmap/donors_round"
-            android:title="Donor"
+            android:title="Profile"
             />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@mipmap/register_round"
+            android:title="Info" />
 
         <item
-            android:id="@+id/nav_recipient"
-            app:showAsAction="always"
+            android:id="@+id/nav_logOut"
             android:icon="@mipmap/marress_round"
-            android:title="Recipient"/>
+            android:title="Log Out"/>
 
-        <item
-            android:id="@+id/nav_depoist"
-            android:icon="@mipmap/bloodd_round"
-            android:title="Depoist" />
+
 
 
     </group>

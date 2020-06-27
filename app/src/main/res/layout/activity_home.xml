@@ -1,49 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.fiek.transfuzioni_gjakut.Home"
-    android:background="@color/redwall">
+    android:background="@color/blue3">
 
-    <ImageView
-        android:id="@+id/imgViewHome"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/wall1"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/baloo"
+        android:layout_marginLeft="30dp"/>
 
 
 
 
         <Button
-            android:id="@+id/btnHomeLogin"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnHomeLoginUser"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/redwall"
+            android:textColor="@color/blue5"
             android:background="@drawable/custom_button"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp"
 
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
 
-            android:text="Login"
+            android:text="Login as User"
             />
+    <Button
+        android:id="@+id/btnHomeLoginAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue5"
+        android:background="@drawable/custom_button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:text="Login as Admin"
+        />
 
         <Button
             android:id="@+id/btnHomeSignUp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/redwall"
+            android:textColor="@color/blue5"
             android:background="@drawable/custom_button"
-            app:layout_constraintStart_toEndOf="@+id/btnHomeLogin"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
 
             android:text="Sign up"/>
 
@@ -56,4 +75,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

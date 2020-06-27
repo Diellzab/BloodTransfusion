@@ -47,6 +47,10 @@
             android:icon="@mipmap/register_round"
             android:title="Log Out"/>
 
+        <item android:id="@+id/nav_info"
+            android:icon="@mipmap/bloodd_round"
+            android:title="Info"/>
+
 
     </group>
 
