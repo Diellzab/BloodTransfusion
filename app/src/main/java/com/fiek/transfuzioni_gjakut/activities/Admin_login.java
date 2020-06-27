@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 
 public class Admin_login extends AppCompatActivity {
@@ -104,7 +105,7 @@ public class Admin_login extends AppCompatActivity {
                 alertDialog.setPositiveButton(R.string.positive_button, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent main3Activity = new Intent(Admin_login.this,Dashboard.class);
+                        Intent main3Activity = new Intent(Admin_login.this, MainActivity.class);
                         main3Activity.putExtra("username",etUsername.getText().toString());
                         startActivity(main3Activity);
                     }

@@ -2,6 +2,7 @@
 package com.fiek.transfuzioni_gjakut.activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.RecipientFragment;
 import com.fiek.transfuzioni_gjakut.depoistFragment;
@@ -28,7 +30,7 @@ public class MainActivity_user extends AppCompatActivity implements NavigationVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_user);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,8 +44,8 @@ public class MainActivity_user extends AppCompatActivity implements NavigationVi
 
 
         if (savedInstanceState==null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_Register);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InfoFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_info);
         }
 
     }
@@ -61,20 +63,20 @@ public class MainActivity_user extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId()){
-            case R.id.nav_depoist:
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new depoistFragment()).commit();
-            break;
-            case R.id.nav_donor:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new donorFragment()).commit();
+        switch (menuItem.getItemId()) {
+            case R.id.nav_Home:
+                startActivity(new Intent(MainActivity_user.this, Dashboard.class));
+            case R.id.nav_Profile:
+                startActivity(new Intent(MainActivity_user.this, UserProfile.class));
+
+            case R.id.nav_info:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InfoFragment()).commit();
                 break;
-            case R.id.nav_recipient:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecipientFragment()).commit();
-                break;
-            case R.id.nav_Register:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
-                break;
+
+            case R.id.nav_logOut:
+                startActivity(new Intent(MainActivity_user.this, Login_form.class));
         }
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
 

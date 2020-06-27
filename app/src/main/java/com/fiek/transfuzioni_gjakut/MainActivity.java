@@ -16,10 +16,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.RecipientFragment;
 import com.fiek.transfuzioni_gjakut.activities.ActivityListaMarresve;
+import com.fiek.transfuzioni_gjakut.activities.Admin_login;
 import com.fiek.transfuzioni_gjakut.activities.Admin_registration;
 import com.fiek.transfuzioni_gjakut.activities.Dashboard;
 import com.fiek.transfuzioni_gjakut.activities.DepozitaEgjakut;
 import com.fiek.transfuzioni_gjakut.activities.DepozitaList;
+import com.fiek.transfuzioni_gjakut.activities.InfoFragment;
+import com.fiek.transfuzioni_gjakut.activities.Login_form;
 import com.fiek.transfuzioni_gjakut.activities.Registration_form;
 import com.fiek.transfuzioni_gjakut.activities.ShtoMarres;
 import com.fiek.transfuzioni_gjakut.activities.ShtoMarresList;
@@ -31,7 +34,8 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-
+    NavigationView navigationView;
+    Toolbar toolbar = null;
 
 
     @Override
@@ -51,8 +55,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         if (savedInstanceState==null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new registerFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_Home);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InfoFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_info);
         }
 
     }
@@ -93,9 +97,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, Admin_registration.class));
                 break;
             case R.id.nav_logOut:
-                startActivity(new Intent(MainActivity.this, ShtoMarres.class));
+               Intent shto = new Intent(MainActivity.this, Admin_login.class);
+               startActivity(shto);
+            case R.id.nav_info:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InfoFragment()).commit();
                 break;
         }
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
 
