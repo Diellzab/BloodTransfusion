@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import dmax.dialog.SpotsDialog;
 
 public class UserProfile extends AppCompatActivity {
-    TextView emriProfilit, userProfileBloodType, userProfileBloodQuantity,userProfilePhone,userProfileEmail;
+    TextView emriProfilit, userProfileBloodType, userProfileBloodQuantity,userProfilePhone,userProfileEmail, fullname, username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,8 @@ public class UserProfile extends AppCompatActivity {
         userProfileBloodQuantity = findViewById(R.id.userProfileBloodQuantity);
         userProfilePhone = findViewById(R.id.userProfilePhone);
         userProfileEmail = findViewById(R.id.userProfileEmail);
+        fullname = findViewById(R.id.fullName);
+        username = findViewById(R.id.username);
 
 
 
@@ -80,6 +82,8 @@ public class UserProfile extends AppCompatActivity {
                         userProfilePhone.setText("Phone : " + telefoniFromDB);
                         userProfileEmail.setText("Email : " + userEnteredEmailSession);
 
+                        fullname.setText(emriFromDB + " " + mbiemriFromDB);
+                        username.setText(userEnteredEmailSession);
                         dialog.dismiss();
                     }
 
