@@ -2,6 +2,7 @@ package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class DepozitaEgjakut extends AppCompatActivity {
     TextView textViewData;
     ListView listViewDonors;
     List<DepozitaEgjakutClass> depozitaList;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,10 @@ public class DepozitaEgjakut extends AppCompatActivity {
 
         databaseArticles = FirebaseDatabase.getInstance().getReference("DepozitaPlus");
         depozitaList = new ArrayList<>();
+
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Depoist");
 
     }
 

@@ -1,6 +1,7 @@
 package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +37,8 @@ public class ShtoMarres extends AppCompatActivity {
     DatabaseReference reff_reciever;
     DatabaseReference reffDepozita_reciever;
 
+    Toolbar toolbar;
+
     AddDepozitaClass shtoNeDepozit_minus;
     ShtoMarresClass shtoMarres;
     //QETA e ke shtu per ME BA UPDATE
@@ -51,6 +54,11 @@ public class ShtoMarres extends AppCompatActivity {
 
         radioGroup_reciever = findViewById(R.id.add_donor_radioGroup_reciever);
         Button buttonAdd = findViewById(R.id.add_donor_add_btn_reciever);
+
+
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Add a Recipient");
 
 
         reff_reciever = FirebaseDatabase.getInstance().getReference().child("ShtoMarres");

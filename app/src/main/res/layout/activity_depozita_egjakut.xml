@@ -7,6 +7,9 @@
     android:orientation="vertical"
     tools:context="com.fiek.transfuzioni_gjakut.activities.DepozitaEgjakut">
 
+    <include
+        layout="@layout/appbar"/>
+
 
     <TextView
         android:layout_width="match_parent"

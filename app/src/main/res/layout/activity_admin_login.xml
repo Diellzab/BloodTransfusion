@@ -36,6 +36,7 @@
         android:layout_below="@id/tvUsername"
         android:id="@+id/etUsername"
         android:inputType="text"
+        android:hint="Username"
         android:imeOptions="actionNext"></EditText>
     <TextView
         android:layout_width="wrap_content"

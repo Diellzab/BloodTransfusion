@@ -1,6 +1,7 @@
 package com.fiek.transfuzioni_gjakut;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,8 @@ public class ShtoDhurues extends AppCompatActivity {
     EditText add_donor_name, add_donor_surname,add_donor_email,add_donor_phone,add_donor_quantity ;
     DatabaseReference reff;
     DatabaseReference reffDepozita;
+    Toolbar toolbar;
+
 
     AddDepozitaClass shtoNeDepozit;
     addDonorDataInsert shtoDhurues;
@@ -57,6 +60,11 @@ public class ShtoDhurues extends AppCompatActivity {
 
         radioGroup = findViewById(R.id.add_donor_radioGroup);
         Button buttonAdd = findViewById(R.id.add_donor_add_btn);
+
+
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Add a Donor");
 
 
         reff = FirebaseDatabase.getInstance().getReference().child("ShtoDhurues");

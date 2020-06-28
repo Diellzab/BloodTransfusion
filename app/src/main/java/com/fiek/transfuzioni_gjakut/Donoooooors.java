@@ -3,6 +3,7 @@ package com.fiek.transfuzioni_gjakut;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class Donoooooors extends AppCompatActivity {
     TextView textViewData;
     ListView listViewDonors;
     List<addDonorDataInsert> donorsList;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,11 @@ public class Donoooooors extends AppCompatActivity {
 
         databaseArticles = FirebaseDatabase.getInstance().getReference("ShtoDhurues");
         donorsList = new ArrayList<>();
+
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("List of Donors");
+
 
     }
 
