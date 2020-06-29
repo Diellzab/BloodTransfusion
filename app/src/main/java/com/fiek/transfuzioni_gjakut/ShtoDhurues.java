@@ -119,6 +119,8 @@ public class ShtoDhurues extends AppCompatActivity {
 
                     reff.push().setValue(shtoDhurues);
 //                    reffDepozita.push().setValue(shtoNeDepozit);
+
+
 ////////////////////////////////////////////////////////////////////////////
 //Krej qeto posht ki mi ba nese asht per A-
                     if(bloooood.equals("A-")) {
@@ -140,11 +142,15 @@ public class ShtoDhurues extends AppCompatActivity {
 
                             mRefSasia.removeEventListener(this);
                             mRef.removeEventListener(this);
+
+                            Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                         }
 
                         @Override
                         public void onCancelled(FirebaseError firebaseError) {
                             mRefSasia.removeEventListener(this);
+
+
                         }
                     });
                 }
@@ -169,6 +175,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -197,6 +204,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -225,6 +233,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -253,6 +262,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -281,6 +291,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -309,6 +320,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -337,6 +349,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override

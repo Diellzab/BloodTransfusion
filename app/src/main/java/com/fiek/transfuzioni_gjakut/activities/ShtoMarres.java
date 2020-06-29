@@ -134,6 +134,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -163,6 +164,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -191,6 +193,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -219,6 +222,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -247,6 +251,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -275,6 +280,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -303,6 +309,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -331,6 +338,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -343,8 +351,6 @@ public class ShtoMarres extends AppCompatActivity {
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-//                Toast.makeText(this, "Selected Blood Type: " + name,
-//                        Toast.LENGTH_SHORT).show();
                 }
 
                 else {
