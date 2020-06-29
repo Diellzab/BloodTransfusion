@@ -3,6 +3,7 @@ package com.fiek.transfuzioni_gjakut.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.addDonorDataInsert;
 import com.fiek.transfuzioni_gjakut.forms.AddDepozitaClass;
@@ -59,6 +61,12 @@ public class ShtoMarres extends AppCompatActivity {
         toolbar = findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Add a Recipient");
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        onBackPressed();
+
+
 
 
         reff_reciever = FirebaseDatabase.getInstance().getReference().child("ShtoMarres");
@@ -352,6 +360,14 @@ public class ShtoMarres extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+
+    public void onBackPressed(){
+        Intent backMainTest = new Intent(ShtoMarres.this, MainActivity.class);
+        startActivity(backMainTest);
+        finish();
     }
 
 

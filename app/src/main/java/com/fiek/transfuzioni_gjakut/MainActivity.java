@@ -13,22 +13,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.fiek.transfuzioni_gjakut.R;
-import com.fiek.transfuzioni_gjakut.RecipientFragment;
 import com.fiek.transfuzioni_gjakut.activities.ActivityListaMarresve;
 import com.fiek.transfuzioni_gjakut.activities.Admin_login;
 import com.fiek.transfuzioni_gjakut.activities.Admin_registration;
 import com.fiek.transfuzioni_gjakut.activities.Dashboard;
 import com.fiek.transfuzioni_gjakut.activities.DepozitaEgjakut;
-import com.fiek.transfuzioni_gjakut.activities.DepozitaList;
 import com.fiek.transfuzioni_gjakut.activities.InfoFragment;
-import com.fiek.transfuzioni_gjakut.activities.Login_form;
-import com.fiek.transfuzioni_gjakut.activities.Registration_form;
 import com.fiek.transfuzioni_gjakut.activities.ShtoMarres;
-import com.fiek.transfuzioni_gjakut.activities.ShtoMarresList;
-import com.fiek.transfuzioni_gjakut.depoistFragment;
-import com.fiek.transfuzioni_gjakut.donorFragment;
-import com.fiek.transfuzioni_gjakut.registerFragment;
 import com.google.android.material.navigation.NavigationView;
 
 

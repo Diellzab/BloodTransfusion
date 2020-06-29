@@ -8,16 +8,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.fiek.transfuzioni_gjakut.activities.Admin_login;
+import com.fiek.transfuzioni_gjakut.activities.Dashboard;
 import com.fiek.transfuzioni_gjakut.activities.Login_form;
-import com.fiek.transfuzioni_gjakut.activities.MainActivity_user;
 import com.fiek.transfuzioni_gjakut.activities.Registration_form;
-import com.fiek.transfuzioni_gjakut.forms.LoginForm;
 
 public class Home extends AppCompatActivity {
     Button btnHomeLoginUser, btnHomeSingUP, btnHomeLoginAdmin;
     ImageView imgViewHome;
+    TextView seemore;
+    ImageView forward;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,23 @@ public class Home extends AppCompatActivity {
         btnHomeLoginUser= findViewById(R.id.btnHomeLoginUser);
         btnHomeLoginAdmin = findViewById(R.id.btnHomeLoginAdmin);
         btnHomeSingUP = findViewById(R.id.btnHomeSignUp);
+        forward = findViewById(R.id.forward);
+        seemore = findViewById(R.id.seemore);
+        forward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
+        seemore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
 
 
         btnHomeLoginUser.setOnClickListener(new View.OnClickListener() {
