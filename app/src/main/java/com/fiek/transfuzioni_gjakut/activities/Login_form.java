@@ -206,49 +206,24 @@ public class Login_form  extends AppCompatActivity {
 
 
 //////////////////%%%%%%%%%%%%%%%%%%%%%%%%%%//////////////////////////////////////
-                            tvRegister.setText("Jeni lloguar");
+
                             Intent intent = new Intent(getBaseContext(), UserProfile.class);
                             intent.putExtra("emailSession", userEnteredEmailSession);
                             startActivity(intent);
                         }
 
                         else  {
-                            tvRegister.setText("nuk ben");
+                            etEmail.setError("No such user exist");
+                            Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_LONG).show();
                         }
 
                     }
 
-
-
-//                        String nameFromDB = dataSnapshot.child(userEnteredEmail).child("emri").getValue(String.class);
-//                        String surnameFromDB = dataSnapshot.child(userEnteredEmail).child("mbiemri").getValue(String.class);
-//                        String emailFromDB = dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
-//                        String phoneFromDB = dataSnapshot.child(userEnteredEmail).child("telefoni").getValue(String.class);
-//                        String bloodTypeFromDB = dataSnapshot.child(userEnteredEmail).child("tipiGjakut").getValue(String.class);
-//
-//
-//
-//
-//                        Intent intent = new Intent(getApplicationContext(), UserProfile.class);
-//                        intent.putExtra("emri", nameFromDB);
-//                        intent.putExtra("mbiemri", surnameFromDB);
-//                        intent.putExtra("email", emailFromDB);
-//                        intent.putExtra("telefoni", phoneFromDB);
-//                        intent.putExtra("tipiGjakut", bloodTypeFromDB);
-//
-//                        startActivity(intent);
-
-
-
-
-//                    else{
-////                        etPassword.setError("Wrong Password");
-////                        etPassword.requestFocus();
-//                    }
                 }
 
                 else{
                     etEmail.setError("No such user exist");
+                    Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_LONG).show();
                     etEmail.requestFocus();
                 }
             }

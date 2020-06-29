@@ -78,7 +78,7 @@ public class UserProfile extends AppCompatActivity {
 
                         emriProfilit.setText("Full Name : " +emriFromDB + " " + mbiemriFromDB);
                         userProfileBloodType.setText("Blood Type : " + tipiGjakutFromDB);
-                        userProfileBloodQuantity.setText("Quantity : " + sasiaFromDB);
+                        userProfileBloodQuantity.setText("Quantity Given : " + sasiaFromDB + " ml");
                         userProfilePhone.setText("Phone : " + telefoniFromDB);
                         userProfileEmail.setText("Email : " + userEnteredEmailSession);
 
