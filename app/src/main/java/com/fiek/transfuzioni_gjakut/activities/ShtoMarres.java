@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -41,6 +42,8 @@ public class ShtoMarres extends AppCompatActivity {
 
     Toolbar toolbar;
 
+    ImageView backleft;
+
     AddDepozitaClass shtoNeDepozit_minus;
     ShtoMarresClass shtoMarres;
     //QETA e ke shtu per ME BA UPDATE
@@ -58,13 +61,14 @@ public class ShtoMarres extends AppCompatActivity {
         Button buttonAdd = findViewById(R.id.add_donor_add_btn_reciever);
 
 
-        toolbar = findViewById(R.id.appbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Add a Recipient");
-
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        onBackPressed();
+       backleft = findViewById(R.id.backleft);
+       backleft.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(ShtoMarres.this, MainActivity.class);
+               startActivity(intent);
+           }
+       });
 
 
 
@@ -142,7 +146,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -172,7 +176,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -201,7 +205,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -230,7 +234,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -259,7 +263,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -288,7 +292,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -317,7 +321,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -346,7 +350,7 @@ public class ShtoMarres extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -362,7 +366,7 @@ public class ShtoMarres extends AppCompatActivity {
                 }
 
                 else {
-                    Toast.makeText(getApplicationContext(),"Validation Failed. ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Validation Failed. ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,6 +46,7 @@ public class Donoooooors extends AppCompatActivity {
     ListView listViewDonors;
     List<addDonorDataInsert> donorsList;
     Toolbar toolbar;
+    ImageView backleft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +57,16 @@ public class Donoooooors extends AppCompatActivity {
         databaseArticles = FirebaseDatabase.getInstance().getReference("ShtoDhurues");
         donorsList = new ArrayList<>();
 
-        toolbar = findViewById(R.id.appbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("List of Donors");
+        backleft = findViewById(R.id.backleft);
+        backleft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Donoooooors.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }

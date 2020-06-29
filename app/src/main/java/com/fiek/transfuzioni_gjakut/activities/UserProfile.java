@@ -6,10 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fiek.transfuzioni_gjakut.Home;
 import com.fiek.transfuzioni_gjakut.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,7 +25,8 @@ import dmax.dialog.SpotsDialog;
 
 public class UserProfile extends AppCompatActivity {
     TextView emriProfilit, userProfileBloodType, userProfileBloodQuantity,userProfilePhone,userProfileEmail, fullname, username;
-
+    Button logout;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,16 @@ public class UserProfile extends AppCompatActivity {
         userProfileEmail = findViewById(R.id.userProfileEmail);
         fullname = findViewById(R.id.fullName);
         username = findViewById(R.id.username);
+
+        logout = findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseAuth.signOut();
+                finish();
+
+            }
+        });
 
 
 
@@ -74,7 +89,7 @@ public class UserProfile extends AppCompatActivity {
 //                        String sasiaFromDB = (artistSnapshot1.child("sasia").getValue(int.class)).toString();
                         String sasiaFromDB = sasiaX.toString();
 
-                        Toast.makeText(getApplicationContext(),"Welcome "+userEnteredEmailSession, Toast.LENGTH_LONG).show(); //onStart Called
+                        Toast.makeText(getApplicationContext(),"Welcome "+userEnteredEmailSession, Toast.LENGTH_SHORT).show(); //onStart Called
 
                         emriProfilit.setText("Full Name : " +emriFromDB + " " + mbiemriFromDB);
                         userProfileBloodType.setText("Blood Type : " + tipiGjakutFromDB);
@@ -93,7 +108,7 @@ public class UserProfile extends AppCompatActivity {
                 else {
                     dialog.dismiss();
                     emriProfilit.setText("You've not donated blood!");
-                    Toast.makeText(getApplicationContext(),"You have not Donated blod yet !", Toast.LENGTH_LONG).show(); //onStart Called
+                    Toast.makeText(getApplicationContext(),"You have not Donated blod yet !", Toast.LENGTH_SHORT).show(); //onStart Called
                 }
             }
 

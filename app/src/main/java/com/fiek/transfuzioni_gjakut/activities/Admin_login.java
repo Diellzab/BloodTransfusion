@@ -95,7 +95,7 @@ public class Admin_login extends AppCompatActivity {
                     password.equals(dbPassword))
             {
                 Toast.makeText(Admin_login.this,getString(R.string.loguar_sukses),
-                        Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_SHORT).show();
 
 
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(Admin_login.this);

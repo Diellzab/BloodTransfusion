@@ -214,7 +214,7 @@ public class Login_form  extends AppCompatActivity {
 
                         else  {
                             etEmail.setError("No such user exist");
-                            Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -223,7 +223,7 @@ public class Login_form  extends AppCompatActivity {
 
                 else{
                     etEmail.setError("No such user exist");
-                    Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Try again!", Toast.LENGTH_SHORT).show();
                     etEmail.requestFocus();
                 }
             }

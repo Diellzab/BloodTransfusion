@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fiek.transfuzioni_gjakut.Donoooooors;
 import com.fiek.transfuzioni_gjakut.DonorsList;
+import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 import com.fiek.transfuzioni_gjakut.addDonorDataInsert;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -39,6 +43,8 @@ public class DepozitaEgjakut extends AppCompatActivity {
     ListView listViewDonors;
     List<DepozitaEgjakutClass> depozitaList;
     Toolbar toolbar;
+    ImageView backleft;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +55,14 @@ public class DepozitaEgjakut extends AppCompatActivity {
         databaseArticles = FirebaseDatabase.getInstance().getReference("DepozitaPlus");
         depozitaList = new ArrayList<>();
 
-        toolbar = findViewById(R.id.appbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Depoist");
+        backleft = findViewById(R.id.backleft);
+        backleft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DepozitaEgjakut.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

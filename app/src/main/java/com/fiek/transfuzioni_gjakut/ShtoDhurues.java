@@ -3,10 +3,12 @@ package com.fiek.transfuzioni_gjakut;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -40,6 +42,7 @@ public class ShtoDhurues extends AppCompatActivity {
     DatabaseReference reff;
     DatabaseReference reffDepozita;
     Toolbar toolbar;
+    ImageView backleft;
 
 
     AddDepozitaClass shtoNeDepozit;
@@ -62,10 +65,14 @@ public class ShtoDhurues extends AppCompatActivity {
         Button buttonAdd = findViewById(R.id.add_donor_add_btn);
 
 
-        toolbar = findViewById(R.id.appbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Add a Donor");
-
+        backleft  =findViewById(R.id.backleft);
+        backleft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShtoDhurues.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         reff = FirebaseDatabase.getInstance().getReference().child("ShtoDhurues");
         reffDepozita = FirebaseDatabase.getInstance().getReference().child("DepozitaPlus");
@@ -143,7 +150,7 @@ public class ShtoDhurues extends AppCompatActivity {
                             mRefSasia.removeEventListener(this);
                             mRef.removeEventListener(this);
 
-                            Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
@@ -175,7 +182,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -204,7 +211,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -233,7 +240,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -262,7 +269,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -291,7 +298,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -320,7 +327,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -349,7 +356,7 @@ public class ShtoDhurues extends AppCompatActivity {
 
                                 mRefSasia.removeEventListener(this);
                                 mRef.removeEventListener(this);
-                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Added Successfully ", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -382,7 +389,7 @@ public class ShtoDhurues extends AppCompatActivity {
                 }
 
                 else {
-                    Toast.makeText(getApplicationContext(),"Validation Failed. ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Validation Failed. ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

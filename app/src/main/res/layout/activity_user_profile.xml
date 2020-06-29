@@ -176,6 +176,18 @@
         </LinearLayout>
 
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:textSize="25sp"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/other_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/logout"/>
+
 
     </LinearLayout>
 

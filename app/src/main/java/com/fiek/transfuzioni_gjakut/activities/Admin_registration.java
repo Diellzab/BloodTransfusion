@@ -3,25 +3,38 @@ package com.fiek.transfuzioni_gjakut.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
 
 public class Admin_registration extends AppCompatActivity {
 
     EditText etName, etSurname, etAddress, etEmailAddress, etUsername, etPassword;
     Button btnRegister;
+    ImageView backleft;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_registration);
+
+        backleft = findViewById(R.id.backleft);
+        backleft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Admin_registration.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         etName = findViewById(R.id.etName);
         etSurname = findViewById(R.id.etSurname);
@@ -50,7 +63,7 @@ public class Admin_registration extends AppCompatActivity {
                     if(retValue>0)
                     {
                         Toast.makeText(Admin_registration.this,"Admin added: "+retValue,
-                                Toast.LENGTH_LONG).show();
+                                Toast.LENGTH_SHORT).show();
                     }
 
                 }
