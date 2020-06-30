@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:padding="30dp"
-    android:background="@drawable/background_layout"
+    android:background="@color/blue2"
     >
 
     <TextView
@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="30dp"
+        android:textColor="@color/blue5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -23,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@color/blue5"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_depozita_blood_donator_bloodType" />

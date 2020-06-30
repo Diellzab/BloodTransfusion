@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="reload_content_button" type="id" />
+    <item name="network_content_frame" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="webView" type="id" />
+</resources>

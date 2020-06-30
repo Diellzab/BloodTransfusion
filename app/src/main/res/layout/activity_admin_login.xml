@@ -16,41 +16,33 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/blue4"
         android:gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
         android:textSize="36sp"
         android:text="Login as Nurse"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:text="Username"
-        android:textColor="@color/blue4"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/tvadmin"
-        android:id="@+id/tvUsername"></TextView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:layout_below="@id/tvUsername"
+        android:layout_below="@id/tvadmin"
         android:id="@+id/etUsername"
+        android:hint="Username"
+        android:padding="15dp"
+        android:background="@drawable/edittext"
         android:inputType="text"
         android:imeOptions="actionNext"></EditText>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/etUsername"
-        android:text="Passowrd"
-        android:id="@+id/tvPassword"></TextView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Passowrd"
         android:textSize="22sp"
-        android:layout_below="@id/tvPassword"
+        android:layout_below="@id/etUsername"
+        android:background="@drawable/edittext"
         android:inputType="textPassword"
         android:imeOptions="actionDone"
+        android:padding="15dp"
         android:id="@+id/etPassword"></EditText>
     <Button
         android:layout_width="match_parent"

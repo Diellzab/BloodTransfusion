@@ -33,7 +33,11 @@
             </intent-filter>
 
 
+
+
         </activity>
+
+        
         <activity android:name=".Home" />
         <activity android:name=".activities.Coronavirus_Cases" />
         <activity android:name=".activities.Login_form">

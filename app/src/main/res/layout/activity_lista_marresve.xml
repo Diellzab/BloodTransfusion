@@ -19,14 +19,14 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/backleft"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="0dp"/>
 
         <TextView
             android:id="@+id/titleDepoist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Blood Depoist"
+            android:text="Recipient List"
             android:textSize="28sp"
             android:fontFamily="@font/roboto"
             android:textColor="@color/blue5"
@@ -34,15 +34,7 @@
     </LinearLayout>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Receivers List"
-        android:gravity="center"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
-        />
+
 
     <ListView
         android:id="@+id/listViewRecievers"

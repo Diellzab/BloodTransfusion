@@ -68,19 +68,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.nav_Home:
-                startActivity(new Intent(MainActivity.this, Dashboard.class));
-                break;
+
             case R.id.nav_Register_donor:
                 startActivity(new Intent(MainActivity.this, ShtoDhurues.class));
                 break;
             case R.id.nav_donor:
                 startActivity(new Intent(MainActivity.this, Donoooooors.class));
-            case R.id.nav_recipient:
-               startActivity(new Intent(MainActivity.this, ActivityListaMarresve.class));
-               break;
+                break;
             case R.id.nav_register_recipient:
-                startActivity(new Intent(MainActivity.this, ShtoMarres.class));
+               startActivity(new Intent(MainActivity.this, ShtoMarres.class));
+               break;
+            case R.id.nav_recipient:
+                startActivity(new Intent(MainActivity.this, ActivityListaMarresve.class));
+                break;
             case R.id.nav_depoist:
                 startActivity(new Intent(MainActivity.this, DepozitaEgjakut.class));
                 break;

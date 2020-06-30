@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:padding="10dp"
+        android:padding="5dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -20,7 +20,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/backleft"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="0dp"/>
 
         <TextView
             android:id="@+id/titleDepoist"
@@ -37,127 +37,87 @@
     
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:fontFamily="@font/rajdhani_medium"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/blue4"
-        android:layout_marginLeft="20dp"
-        android:text="First Name"></TextView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
+        android:padding="15dp"
+        android:background="@drawable/edittext"
         android:id="@+id/etName"
-        android:layout_marginBottom="0dp"
+        android:hint="First Name"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:inputType="textCapWords"
         android:imeOptions="actionNext"></EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:fontFamily="@font/rajdhani_medium"
-        android:layout_marginBottom="0dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/blue4"
-        android:layout_marginLeft="20dp"
-        android:text="Last Name"></TextView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:padding="15dp"
+        android:hint="Last Name"
+        android:background="@drawable/edittext"
         android:id="@+id/etSurname"
         android:inputType="textCapWords"
         android:imeOptions="actionNext"></EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_marginBottom="0dp"
-        android:textColor="@color/blue4"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:fontFamily="@font/rajdhani_medium"
-        android:text="Address"></TextView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:id="@+id/etAddress"
-        android:layout_marginBottom="0dp"
+        android:background="@drawable/edittext"
+        android:padding="15dp"
+        android:hint="Address"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:inputType="textCapWords"
         android:imeOptions="actionNext"></EditText>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:textColor="@color/blue4"
-        android:fontFamily="@font/rajdhani_medium"
-        android:layout_marginBottom="0dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Email"></TextView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:id="@+id/etMail"
-        android:layout_marginBottom="0dp"
+        android:background="@drawable/edittext"
+        android:padding="15dp"
+        android:hint="Email Address"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:inputType="textEmailAddress"
         android:imeOptions="actionNext"></EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_marginBottom="0dp"
-        android:fontFamily="@font/rajdhani_medium"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/blue4"
-        android:layout_marginLeft="20dp"
-        android:text="Username"></TextView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:id="@+id/etUsername"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/edittext"
+        android:hint="Username"
+        android:padding="15dp"
         android:layout_marginLeft="20dp"
         android:inputType="text"
         android:imeOptions="actionNext"></EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:fontFamily="@font/rajdhani_medium"
-        android:layout_marginBottom="0dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/blue4"
-        android:layout_marginLeft="20dp"
-        android:text="Password"></TextView>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:id="@+id/etPassword"
-        android:layout_marginBottom="0dp"
+        android:hint="Password"
+        android:background="@drawable/edittext"
+        android:padding="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:inputType="textPassword"

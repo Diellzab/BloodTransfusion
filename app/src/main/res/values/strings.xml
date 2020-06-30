@@ -83,6 +83,9 @@
     <string name="nav_info">Info</string>
     <string name="nav_logOut">Log Out</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error_text" />
+    <string name="retry_text" />
+    <string name="check_network_text">check_network_text</string>
 
     <!--    Toolbar titles when navigation menu item is selected-->
     <string-array name="type">
