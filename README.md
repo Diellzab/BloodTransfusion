@@ -6,7 +6,7 @@ The app is simple, anyone can install it and can open an account but if you have
 if a hospital nurse will add you in blood database than in your profile will be evident your email, name , phone number, blood type and blood quantity that you've donated.
 
 ## User (Blood Donator) App part
-first you should Register by clicking Sign Up
+### first you should Register by clicking Sign Up
 ![](images/01firstView.jpg)
 
 ![](images/02signup.jpg)
