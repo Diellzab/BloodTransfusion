@@ -1,11 +1,11 @@
 # BloodTransfusion
 
 ## Who is supposed to use this App ?
-This App will be used by the hospital, for nurses who will add to database people that donate blood and by blood donators.
+This App will be used by the hospital, for nurses who will add to database people that donate blood and by blood Donors.
 The app is simple, anyone can install it and can open an account but if you have never donated blood, in your profile will be written that you have not donated blood yet,
 if a hospital nurse will add you in blood database than in your profile will be evident your email, name , phone number, blood type and blood quantity that you've donated.
 
-## User (Blood Donator) App part
+## User (Blood Donor) App part
 ### first you should Register by clicking Sign Up
 ![](images/01firstView.jpg)
 
@@ -41,5 +41,5 @@ if a hospital nurse will add you in blood database than in your profile will be 
 ### Here you can add a blood donor to database
 ![](images/11addonor.jpg)
 
-### Now when we login again as a user (donator) we see our blood history!
+### Now when we login again as a user (donor) we see our blood history!
 ![](images/13finalprofile.jpg)
