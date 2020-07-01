@@ -9,37 +9,36 @@ if a hospital nurse will add you in blood database than in your profile will be 
 first you should Register by clicking Sign Up
 ![](images/01firstView.jpg)
 
-![](images/02signup.jpg 200)
-Now you are signed up, and you got a blood donation account, but you have not donated yet blood so after login 
-your account will be like this
+![](images/02signup.jpg)
+### Now you are signed up, and you got a blood donation account, but you have not donated yet blood so after login your account will be like this
 
 ![](images/03login.jpg)
 ![](images/04account.jpg)
 
 ## Nurse App part
 
-###To sign in as a Nurse the administrator of the app or an another Nurse should add an account for you.
+### To sign in as a Nurse the administrator of the app or an another Nurse should add an account for you.
 ![](images/05nurse.jpg)
 
-###This is a welcome page.
+### This is a welcome page.
 ![](images/06welcome.jpg)
 
-###This is list of donors that fetch real time data from firebase 
+### This is list of donors that fetch real time data from firebase 
 ![](images/07donnors.jpg)
 
-###Here can be found blood recipients
+### Here can be found blood recipients
 ![](images/08recipent.jpg)
 
-###This is deposit of all blood types that is stored
+### This is deposit of all blood types that is stored
 ![](images/09depo.jpg)
 
-###Here you can add another admin (nurse) 
+### Here you can add another admin (nurse) 
 ![](images/10admin.jpg)
 
-###Here you can add a blood reciever to database
+### Here you can add a blood reciever to database
 ![](images/12rec.jpg)
 
-###Here you can add a blood donor to database
+### Here you can add a blood donor to database
 ![](images/11addonor.jpg)
 
 ### Now when we login again as a user (donator) we see our blood history!
