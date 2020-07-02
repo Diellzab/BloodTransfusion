@@ -43,3 +43,6 @@ if a hospital nurse will add you in blood database than in your profile will be 
 
 ### Now when we login again as a user (donor) we see our blood history!
 ![](images/13finalprofile.jpg)
+
+### Here you can find some informations about blood types!
+![](images/14infos.jpg)
