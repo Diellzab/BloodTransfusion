@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.models;
 
 import android.os.AsyncTask;
 

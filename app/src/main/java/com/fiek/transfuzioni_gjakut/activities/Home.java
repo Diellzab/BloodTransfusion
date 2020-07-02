@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,10 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fiek.transfuzioni_gjakut.activities.Admin_login;
-import com.fiek.transfuzioni_gjakut.activities.Dashboard;
-import com.fiek.transfuzioni_gjakut.activities.Login_form;
-import com.fiek.transfuzioni_gjakut.activities.Registration_form;
+import com.fiek.transfuzioni_gjakut.R;
 
 public class Home extends AppCompatActivity {
     Button btnHomeLoginUser, btnHomeSingUP, btnHomeLoginAdmin;

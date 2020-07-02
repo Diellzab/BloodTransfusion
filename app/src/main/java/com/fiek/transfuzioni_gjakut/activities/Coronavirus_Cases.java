@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.api.fetchData;
 
 public class Coronavirus_Cases extends AppCompatActivity {
     public static TextView data;

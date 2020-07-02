@@ -1,7 +1,6 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.models;
 
-public class ShtoMarresClass {
-
+public class addDonorDataInsert {
 
     private String emri;
     private String mbiemri;
@@ -10,7 +9,17 @@ public class ShtoMarresClass {
     private String telefoni;
     private Integer sasia;
 
-    public ShtoMarresClass() {
+    public addDonorDataInsert() {
+    }
+
+    public addDonorDataInsert(String emri,String mbiemri,String email,String tipiGjakut,String telefoni,int sasia) {
+    this.emri = emri;
+    this.mbiemri = mbiemri;
+    this.email = email;
+    this.tipiGjakut = tipiGjakut;
+    this.telefoni = telefoni;
+    this.sasia = sasia;
+
     }
 
     public String getEmri() {

@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut.forms;
+package com.fiek.transfuzioni_gjakut.models;
 
 public class AddDepozitaClass {
 

@@ -9,15 +9,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.database.DatabaseHelper;
+import com.fiek.transfuzioni_gjakut.models.User;
 
 public class Admin_login extends AppCompatActivity {
 

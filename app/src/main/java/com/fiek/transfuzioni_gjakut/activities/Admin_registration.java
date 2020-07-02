@@ -11,11 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.database.DatabaseHelper;
+import com.fiek.transfuzioni_gjakut.models.User;
 
 public class Admin_registration extends AppCompatActivity {
 

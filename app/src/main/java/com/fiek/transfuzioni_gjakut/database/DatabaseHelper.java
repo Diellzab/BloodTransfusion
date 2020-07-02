@@ -1,10 +1,12 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import com.fiek.transfuzioni_gjakut.models.User;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

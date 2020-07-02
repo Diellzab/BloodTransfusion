@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.models;
 
 public class User {
     public static final String ID = "id";

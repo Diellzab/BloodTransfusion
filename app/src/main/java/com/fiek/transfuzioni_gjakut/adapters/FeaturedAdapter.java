@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.models.FeaturedHelperClass;
 
 import java.util.ArrayList;
 

@@ -27,7 +27,7 @@
 
         </activity>
         <activity android:name=".activities.ShtoMarres"></activity>
-        <activity android:name=".splashScreen">
+        <activity android:name=".activities.splashScreen">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +42,7 @@
         </activity>
 
 
-        <activity android:name=".Home" />
+        <activity android:name=".activities.Home" />
         <activity android:name=".activities.Coronavirus_Cases" />
         <activity android:name=".activities.Login_form">
 
@@ -52,21 +52,19 @@
 
         </activity>
         <activity android:name=".activities.Registration_form" />
-        <activity android:name=".forms.RegistrationForm" />
-        <activity android:name=".forms.LoginForm" />
-        <activity android:name=".ShtoDhurues"></activity>
+        <activity android:name=".activities.ShtoDhurues"></activity>
         <activity android:name=".activities.Admin_login">
 
 
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
 
 
 
         </activity>
 
-        <activity android:name=".Donoooooors">
+        <activity android:name=".activities.Donoooooors">
 
 
         </activity>

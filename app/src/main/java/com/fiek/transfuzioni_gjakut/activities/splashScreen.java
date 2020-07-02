@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.fiek.transfuzioni_gjakut.R;
 
 public class splashScreen extends AppCompatActivity {
 

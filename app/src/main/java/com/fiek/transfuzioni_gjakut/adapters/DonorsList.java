@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.models.addDonorDataInsert;
+
 import java.util.List;
 
 public class DonorsList extends ArrayAdapter<addDonorDataInsert> {
@@ -17,7 +20,7 @@ public class DonorsList extends ArrayAdapter<addDonorDataInsert> {
     private List<addDonorDataInsert> donorList;
 
     public DonorsList(Activity context, List<addDonorDataInsert> donorList) {
-        super(context,R.layout.list_items_for_donnors, donorList);
+        super(context, R.layout.list_items_for_donnors, donorList);
         this.context = context;
         this.donorList = donorList;
     }

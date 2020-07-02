@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,18 +17,15 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
-import com.fiek.transfuzioni_gjakut.forms.AddDepozitaClass;
+import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.models.AddDepozitaClass;
+import com.fiek.transfuzioni_gjakut.models.addDonorDataInsert;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.firebase.client.Firebase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;

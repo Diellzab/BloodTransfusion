@@ -12,11 +12,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fiek.transfuzioni_gjakut.Donoooooors;
-import com.fiek.transfuzioni_gjakut.DonorsList;
-import com.fiek.transfuzioni_gjakut.MainActivity;
+import com.fiek.transfuzioni_gjakut.adapters.DonorsList;
 import com.fiek.transfuzioni_gjakut.R;
-import com.fiek.transfuzioni_gjakut.addDonorDataInsert;
+import com.fiek.transfuzioni_gjakut.models.addDonorDataInsert;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;

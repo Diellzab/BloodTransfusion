@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -19,10 +17,8 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
-import com.fiek.transfuzioni_gjakut.MainActivity;
 import com.fiek.transfuzioni_gjakut.R;
-import com.fiek.transfuzioni_gjakut.forms.LoginForm;
-import com.fiek.transfuzioni_gjakut.forms.RegistrationForm;
+import com.fiek.transfuzioni_gjakut.models.AddUserClass;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -115,7 +111,7 @@ public class Registration_form extends AppCompatActivity {
 
                     reffUser.push().setValue(addUserClass);
 
-                    Intent intent = new Intent(Registration_form.this, LoginForm.class);
+                    Intent intent = new Intent(Registration_form.this, Login_form.class);
                     startActivity(intent);
                 }
 
@@ -145,7 +141,7 @@ public class Registration_form extends AppCompatActivity {
     }
 
     public void sign_in_method_register_form(View v) {
-        Intent intent = new Intent(Registration_form.this, LoginForm.class);
+        Intent intent = new Intent(Registration_form.this, Login_form.class);
         startActivity(intent);
     }
 }

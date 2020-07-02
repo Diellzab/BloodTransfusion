@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.fragments;
 
 import android.os.Bundle;
 

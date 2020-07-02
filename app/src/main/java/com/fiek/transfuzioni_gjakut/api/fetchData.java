@@ -1,6 +1,8 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.api;
 
 import android.os.AsyncTask;
+
+import com.fiek.transfuzioni_gjakut.activities.Coronavirus_Cases;
 
 import org.json.JSONArray;
 import org.json.JSONException;

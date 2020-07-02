@@ -1,5 +1,5 @@
 
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.models;
 
 public class DepozitaEgjakutClass {
     private Long sasiaGjakut;

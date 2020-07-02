@@ -1,25 +1,16 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.models;
 
-public class AddUserClass {
+public class ShtoMarresClass {
 
-    private String maleFemale;
+
     private String emri;
     private String mbiemri;
     private String email;
-    private String password;
     private String tipiGjakut;
     private String telefoni;
-    private String adresa;
+    private Integer sasia;
 
-    public AddUserClass() {
-    }
-
-    public String getMaleFemale() {
-        return maleFemale;
-    }
-
-    public void setMaleFemale(String maleFemale) {
-        this.maleFemale = maleFemale;
+    public ShtoMarresClass() {
     }
 
     public String getEmri() {
@@ -46,14 +37,6 @@ public class AddUserClass {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getTipiGjakut() {
         return tipiGjakut;
     }
@@ -70,11 +53,11 @@ public class AddUserClass {
         this.telefoni = telefoni;
     }
 
-    public String getAdresa() {
-        return adresa;
+    public Integer getSasia() {
+        return sasia;
     }
 
-    public void setAdresa(String adresa) {
-        this.adresa = adresa;
+    public void setSasia(Integer sasia) {
+        this.sasia = sasia;
     }
 }

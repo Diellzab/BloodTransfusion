@@ -5,16 +5,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.fiek.transfuzioni_gjakut.Home;
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.adapters.FeaturedAdapter;
+import com.fiek.transfuzioni_gjakut.adapters.RarestAdapter;
+import com.fiek.transfuzioni_gjakut.models.FeaturedHelperClass;
+import com.fiek.transfuzioni_gjakut.models.RarestHelperClass;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class Dashboard extends AppCompatActivity {

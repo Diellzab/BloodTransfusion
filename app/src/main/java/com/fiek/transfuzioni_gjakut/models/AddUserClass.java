@@ -1,25 +1,25 @@
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.models;
 
-public class addDonorDataInsert {
+public class AddUserClass {
 
+    private String maleFemale;
     private String emri;
     private String mbiemri;
     private String email;
+    private String password;
     private String tipiGjakut;
     private String telefoni;
-    private Integer sasia;
+    private String adresa;
 
-    public addDonorDataInsert() {
+    public AddUserClass() {
     }
 
-    public addDonorDataInsert(String emri,String mbiemri,String email,String tipiGjakut,String telefoni,int sasia) {
-    this.emri = emri;
-    this.mbiemri = mbiemri;
-    this.email = email;
-    this.tipiGjakut = tipiGjakut;
-    this.telefoni = telefoni;
-    this.sasia = sasia;
+    public String getMaleFemale() {
+        return maleFemale;
+    }
 
+    public void setMaleFemale(String maleFemale) {
+        this.maleFemale = maleFemale;
     }
 
     public String getEmri() {
@@ -46,6 +46,14 @@ public class addDonorDataInsert {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getTipiGjakut() {
         return tipiGjakut;
     }
@@ -62,11 +70,11 @@ public class addDonorDataInsert {
         this.telefoni = telefoni;
     }
 
-    public Integer getSasia() {
-        return sasia;
+    public String getAdresa() {
+        return adresa;
     }
 
-    public void setSasia(Integer sasia) {
-        this.sasia = sasia;
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
 }

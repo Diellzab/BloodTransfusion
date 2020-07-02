@@ -1,4 +1,4 @@
-package com.fiek.transfuzioni_gjakut.activities;
+package com.fiek.transfuzioni_gjakut.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.models.DepozitaEgjakutClass;
 
 import java.util.List;
 

@@ -1,5 +1,5 @@
 
-package com.fiek.transfuzioni_gjakut;
+package com.fiek.transfuzioni_gjakut.activities;
 
 
 import android.content.Intent;
@@ -13,13 +13,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.fiek.transfuzioni_gjakut.activities.ActivityListaMarresve;
-import com.fiek.transfuzioni_gjakut.activities.Admin_login;
-import com.fiek.transfuzioni_gjakut.activities.Admin_registration;
-import com.fiek.transfuzioni_gjakut.activities.Dashboard;
-import com.fiek.transfuzioni_gjakut.activities.DepozitaEgjakut;
-import com.fiek.transfuzioni_gjakut.activities.InfoFragment;
-import com.fiek.transfuzioni_gjakut.activities.ShtoMarres;
+import com.fiek.transfuzioni_gjakut.R;
+import com.fiek.transfuzioni_gjakut.fragments.InfoFragment;
 import com.google.android.material.navigation.NavigationView;
 
 

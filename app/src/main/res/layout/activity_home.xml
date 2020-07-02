@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fiek.transfuzioni_gjakut.Home"
+    tools:context="com.fiek.transfuzioni_gjakut.activities.Home"
     android:background="@color/blue3">
 
     <TextView
