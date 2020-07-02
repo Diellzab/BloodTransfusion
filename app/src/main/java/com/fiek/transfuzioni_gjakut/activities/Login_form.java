@@ -165,7 +165,7 @@ public class Login_form  extends AppCompatActivity {
             }
         });
 
-
+//        System.gc();
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

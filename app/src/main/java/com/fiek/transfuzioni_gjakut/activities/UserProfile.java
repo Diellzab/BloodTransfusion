@@ -41,7 +41,8 @@ public class UserProfile extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
+//                firebaseAuth.signOut();
+                System.gc();
                 finish();
 
             }
